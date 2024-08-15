@@ -11,7 +11,8 @@ gigachain_core
 gigachain_community
 gigachain_experimental
 SpeechRecognition
-pyAudio
+PyAudio==0.2.14
+pyproject-toml==0.0.10
 elevenlabs
 datasets
 sentencepiece
