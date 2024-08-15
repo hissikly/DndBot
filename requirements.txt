@@ -1,5 +1,6 @@
 requests
 streamlit
+pandas
 bokeh
 streamlit_bokeh_events
 audio_recorder_streamlit

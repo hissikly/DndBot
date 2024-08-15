@@ -7,6 +7,7 @@ from langchain_community.chat_models.gigachat import GigaChat
 from langchain.schema import HumanMessage, SystemMessage
 import static.data as data
 import streamlit as st
+import io
 
 
 def get_message_by_gigachain(session_messages: dict, message: str):
@@ -73,13 +74,12 @@ def save_genrated_image(img_uuid):
     }
 
     response = requests.request("GET", url, headers=headers, stream=True, verify=False)
-    image_number = data.get_count_in_folder("static/images/generated/") + 1
-    path_to_img = f'static/images/generated/img{image_number}.jpg'
-    with open(path_to_img, 'wb') as out_file:
-        shutil.copyfileobj(response.raw, out_file)
+
+    st.session_state.bytes_of_images.append(response.content)
+
     del response
 
-    return path_to_img
+    return
 
 
 def get_image_by_gigachain(message: str):
@@ -93,6 +93,7 @@ def get_image_by_gigachain(message: str):
 
     img_uuid = content.split('src="')[1].split('" fuse=')[0]
 
-    path_to_img = save_genrated_image(img_uuid)
+    save_genrated_image(img_uuid)
+    image_stream = io.BytesIO(st.session_state.bytes_of_images[-1])
     res_title = return_json["choices"][0]["message"]["data_for_context"][2]["content"]
-    return res_title, path_to_img
+    return res_title, image_stream

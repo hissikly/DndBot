@@ -134,27 +134,23 @@ def show_messages_states(info_dict: dict):
     
     if "command" in info_dict:
         command = info_dict["command"]
-        path = info_dict["path"]
     else:
         command = None
-        path = None
 
     with st.chat_message(role):
         st.markdown(response)
 
     if command == "speak":
-        path = info_dict["path"]
-        audio_file = open(path, "rb")
-        audio_bytes = audio_file.read()
-        st.audio(audio_bytes, format="audio/ogg")
-    elif command == "image":
-        path = info_dict["path"]
-        st.image(path)
+        st.audio(st.session_state.bytes_of_voices[-1], format="audio/ogg")
 
-    return response, command, path
+    return response, command
 
 
 def set_states():
+    if "bytes_of_voices" not in st.session_state:
+        st.session_state.bytes_of_voices = []
+    if "bytes_of_images" not in st.session_state:
+        st.session_state.bytes_of_images = []
     if "is_fsm_dialog" not in st.session_state:
         st.session_state.is_fsm_dialog = False
     if "is_fsm_img" not in st.session_state:
@@ -257,21 +253,18 @@ def main():
                 st.session_state.messages.append(info_dict)
                 st.session_state.is_fsm_dialog = False
             else:
-                # try:
-                    voice_number = data.get_count_in_folder("static/music/voice/") + 1
-                    path_to_voice = f"voice/voice{voice_number}.mp3"
+                try:
                     llm_answer = ggm.get_message_by_gigachain(st.session_state.messages, prompt)
+                    record_text(llm_answer, data.voice_types[voice_type])
 
-                    output_path = record_text(llm_answer, data.voice_types[voice_type], path=path_to_voice)["detail"]
-                    info_dict = data.get_info_dict("assistant", llm_answer, command="speak", path=output_path)
-
+                    info_dict = data.get_info_dict("assistant", llm_answer, command="speak")
                     show_messages_states(info_dict)
-                    
+
                     st.session_state.messages.append(info_dict)
-                # except:
-                #     info_dict = data.get_info_dict("assistant", data.smth_wrong_replic)
-                #     show_messages_states(info_dict)
-                #     st.session_state.messages.append(info_dict)
+                except:
+                    info_dict = data.get_info_dict("assistant", data.smth_wrong_replic)
+                    show_messages_states(info_dict)
+                    st.session_state.messages.append(info_dict)
 
         elif st.session_state.is_fsm_img:
             if prompt.strip().lower() == "стоп":
@@ -329,8 +322,8 @@ def main():
                 response = f"Прародитель:\n {prompt}"
                 with st.chat_message("assistant"):
                     st.markdown(response)
-                path_to_voice = play_record_text(voice_type, prompt)
-                st.session_state.messages.append({"role": "assistant", "content": response, "command": "speak", "path": path_to_voice})
+                play_record_text(voice_type, prompt)
+                st.session_state.messages.append({"role": "assistant", "content": response, "command": "speak"})
             except:
                 st.session_state.messages.append({"role": "assistant", "content": data.smth_wrong_replic})
     
