@@ -3,6 +3,13 @@ bokeh
 streamlit_bokeh_events
 audio_recorder_streamlit
 streamlit_option_menu
+gigachain==0.2.12
+gigachain-cli==0.0.28
+gigachain-community==0.2.11
+gigachain-core==0.2.29
+gigachain-experimental==0.0.64
+gigachain-text-splitters==0.2.3
+gigachat==0.1.33
 SpeechRecognition
 elevenlabs
 python-dotenv
