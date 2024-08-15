@@ -24,14 +24,9 @@ bots_plot = "Мы играем в настольную игру 'подземе�
 image_plot = "мы находимся в средневековом фэнтези мире. Хочу чтобы на картинке, которую ты нарисуешь, был изображен"
 smth_wrong_replic = "Прародитель:\n Попробуйте ещё раз... Что-то пошло не так"
 
-def get_info_dict(role: str, content: str, command = None, path = None):
-    res_dict = {"role": role, "content": content, "command": command, "path": path}
+def get_info_dict(role: str, content: str, command = None):
+    res_dict = {"role": role, "content": content, "command": command}
     return res_dict
-
-
-def get_count_in_folder(path):
-    return len([name for name in os.listdir(path) if os.path.isfile(os.path.join(path, name))])
-
 
 def get_random_key():
     return str(uuid.uuid4())

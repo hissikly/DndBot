@@ -23,8 +23,7 @@ def space_main_sidebar():
             button_box = st.form_submit_button("Задать", "primary")
 
             st.session_state.voice_type = voice_type
-
-        change_title_button()
+            
         play_audio(state, location)
         commands_buttons()
 
@@ -53,23 +52,6 @@ def commands_buttons():
     with col3:
         st.button("/image",  on_click=rules_button_event, args=("/image",))
         st.button("/dialog",  on_click=rules_button_event, args=("/dialog",))
-
-
-def change_title_button():
-    if not st.session_state.voice_record_button:
-        button_voice = st.button("Запись голоса", type="primary", on_click=voice_button_event, key="voice_button")
-    elif st.session_state.voice_record_button:
-        button_voice = st.button("Записываю", type="primary", on_click=stop_button_event, key="voice_button")
-    return button_voice
-
-
-def voice_button_event():
-    st.session_state.voice_record_button = True
-    default_text = record_voice()
-    st.session_state.is_recorded_voice = True
-
-    st.session_state.default_text = default_text
-
 
 def rules_button_event(text: str):
     st.session_state.default_text = text
