@@ -2,14 +2,13 @@ import requests
 import random
 import static.data as data
 import streamlit as st
-import os
 
 
 def record_text(text_to_speak: str, voice_type: str, chunk_size = 1024, path = "voice/voice1.mp3"):
     output_path = "static/music/" + path
     headers = {
         "Accept": "application/json",
-        "xi-api-key": os.getenv("XI_API_KEY")
+        "xi-api-key": st.secrets["XI_API_KEY"]
     }
 
     data = {

@@ -1,12 +1,9 @@
 import streamlit as st
 import static.data as data
 import recogniton as rc
-from dotenv import load_dotenv
 import gigachat_models as ggm
 from playback import record_text, play_record_text, play_audio
 from streamlit_option_menu import option_menu
-
-load_dotenv()
 
 
 def set_option_menu():

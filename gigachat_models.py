@@ -5,15 +5,12 @@ import uuid
 import random
 from langchain_community.chat_models.gigachat import GigaChat
 from langchain.schema import HumanMessage, SystemMessage
-import os
-from dotenv import load_dotenv
 import static.data as data
-
-load_dotenv()
+import streamlit as st
 
 
 def get_message_by_gigachain(session_messages: dict, message: str):
-    chat = GigaChat(credentials=os.getenv("CREDENTIALS"), verify_ssl_certs=False)
+    chat = GigaChat(credentials=st.secrets["CREDENTIALS"], verify_ssl_certs=False)
 
     pipeline = [SystemMessage(content=data.bots_plot)]
 
@@ -33,7 +30,7 @@ def get_access_token():
     'Content-Type': 'application/x-www-form-urlencoded',
     'Accept': 'application/json',
     'RqUID': str(uuid.UUID(int=random.getrandbits(128), version=4)),
-    'Authorization': 'Basic ' + os.getenv("CREDENTIALS")
+    'Authorization': 'Basic ' + st.secrets["CREDENTIALS"]
     }
 
     response = requests.request("POST", url, headers=headers, data=payload, verify=False)

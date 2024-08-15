@@ -11,6 +11,5 @@ gigachain_community
 gigachain_experimental
 SpeechRecognition
 elevenlabs
-python-dotenv
 datasets
 sentencepiece
