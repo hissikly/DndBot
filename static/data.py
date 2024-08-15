@@ -1,0 +1,210 @@
+import os
+import uuid
+import pandas as pd
+
+locations = {"Аркона": "Arcona", "Астарен": "Astaren", "Асватиф": "Asvatyph", "Остров Брасион": "BracionIsl", "Кордол": "Cordol", \
+             "Детромар": "Detromar", "Экалдун": "Ecaldun", "Хуния": "Hunia", "Остров Истарен": "IstarenIsl", "Криггер": "Krigger", "Лонтор": "Lontor", "Мондрон": "Mondron", \
+             "Огрон": "Ogron", "Прасия": "Pracia", "Риверсенд": "Riversend", "Шалдар": "Shal'dar", "Шривел": "Shrivel", "Достопримечательности": "Sightseeings", "Города": "Towns", \
+             "Вердаэль": "Verd'ael", "Виструн": "Vistrune", "Вондерхом": "Wonnderhome"}
+
+states = {"По умолчанию": "default", "Радостная": "happy", "Спокойная": "quiet", "Загадочная": "mystery", "Напряженная": "napr", "Пугающая": "scary"}
+
+voice_types =  {'Адам': 'pNInz6obpgDQGcFmaJgB', 'Энтони': 'ErXwobaYiN019PkySvjV', 'Арнольд': 'VR6AewLTigWG4xSOukaG', 'Бэлла': 'EXAVITQu4vr4xnSDxMaL', 'Каллум': 'N2lVS1w4EtoT3dr4eOWO',
+                'Чарли': 'IKne3meq5aSn9XLyUdCD', 'Шарлотта': 'XB0fDUnXU5powFXDhCwa', 'Клайд': '2EiwWnXFnvU5JabPnv8n', 'Дэниэль': 'onwK4e9ZLuTAKqWW03F9', 'Дэйв': 'CYw3kZ02Hs0563khs1Fj', 
+                'Доми': 'AZnzlk1XvdvUeBnXmlld', 'Дороти': 'ThT5KcBeYPX3keUQqHPh', 'Элли': 'MF3mGyEYCl7XYWbV9V6O', 'Эмили': 'LcfcDJNUP1GQjkzn1xUU', 'Итан': 'g5CIjZEefAph4nQFvHAz', 
+                'Фин': 'D38z5RcWu1voky8WS1ja', 'Фрейя': 'jsCqWAovK2LkecY7zXl4', 'Джиджи': 'jBpfuIE2acCO8z3wKNLl', 'Джованни': 'zcAOhNBS3c14rBihAFp1', 'Глинда': 'z9fAnlkpzviPz146aGWa', 
+                'Грейс': 'oWAxZDx7w5VEj9dCyTzz', 'Гарри': 'SOYHLrjzK2X1ezoPC6cr', 'Джеймс': 'ZQe5CZNOzWyzPSCn5a3c', 'Джереми': 'bVMeCyTHy58xNoL34h3p', 'Джесси': 't0jbNlBVZ17f02VDIeMI', 
+                'Джозеф': 'Zlb1dXrM653N07WRdFW3', 'Джош': 'TxGEqnHWrfWFTfGW9XjX', 'Лиам': 'TX3LPaxmHKxFdv7VOQHJ', 'Матильда': 'XrExE9yKIg1WjnnlVkGX', 'Мэтью': 'Yko7PKHZNXotIFUBG7I9', 
+                'Майкл': 'flq6f7yk4E4fJM5XTYuZ', 'Мими': 'zrHiDhphv9ZnVXBqCLjz', 'Николь': 'piTKgcLEGmPE4e6mEKli', 'Патрик': 'ODq5zmih8GrVes37Dizd', 'Рэйчел': '21m00Tcm4TlvDq8ikWAM', 
+                'Райан': 'wViXBPUzp2ZZixB1xQuM', 'Сэм': 'yoZ06aMxZJJ28mfd3POQ', 'Серена': 'pMsXgVXv3BLzUgSXRplE', 'Томас': 'GBv7mTt0atIp3Br8iCZ'}
+
+help_answer = "Привет! Я бот, который поможет тебе погрузиться полностью в игру Подземелья и Драконы! Ты можешь выбрать песню, для твоей локации, либо выбрать атмосферу музыки текущей обстановки. Также ты можешь выбрать голос, которым бот будет озвучивать реплики\n/image - попросить бота сгенерирвоать картинку по вашему описанию\n/dialog - начать беседу с ботом\n/rules - посмотреть правила и параметры игры"
+
+bots_plot = "Мы играем в настольную игру 'подземелья и драконы', ты являешься частью аугментивной среды для игры. ты должен уметь отвечать на вопросы игроков об игре, а также создавать подходящую атмосферу с пристутствием фантастических существ и волшебных предметов. по команде /image бот генерирует картинку по вашему описанию, по команде /dialog - начать беседу с ботом"
+image_plot = "мы находимся в средневековом фэнтези мире. Хочу чтобы на картинке, которую ты нарисуешь, был изображен"
+smth_wrong_replic = "Прародитель:\n Попробуйте ещё раз... Что-то пошло не так"
+
+def get_info_dict(role: str, content: str, command = None, path = None):
+    res_dict = {"role": role, "content": content, "command": command, "path": path}
+    return res_dict
+
+
+def get_count_in_folder(path):
+    return len([name for name in os.listdir(path) if os.path.isfile(os.path.join(path, name))])
+
+
+def get_random_key():
+    return str(uuid.uuid4())
+
+parameteres = ['Показатели способностей', 'Мировоззрения', 'предыстории', 'классов', 'эксплуатации', 'Типы урона', 'оборудования', 'Категории испытательного оборудования', 'плод, зародыш', 'характеристики', 'языки', 'Магические предметы', 'Магические школы', 'Монстры', 'Навыки/мастерство', 'Расы', 'Секция по вопросам правопорядка', 'правила', 'навыки', 'заклинания', 'Подклассы', "Параметры", "Свойства оружия"]
+ability_scores_names = ["CHA", "CON", "DEX", "INT", "STR", "WIS"]
+ability_scores = {'Харизма (CHA)': 'Харизма измеряет вашу способность эффективно взаимодействовать с другими. Она включает в себя такие факторы, как уверенность и красноречие, и может представлять обаятельную или властную личность. Проверка Харизмы может возникнуть, когда вы пытаетесь повлиять на других или развлечь их, когда вы пытаетесь произвести впечатление или убедительно лгать, или когда вы лавируете в сложной социальной ситуации. Навыки Обмана, Запугивания, Исполнения и Убеждения отражают способности в определенных видах проверок Харизмы.',
+                  'Телосложение (CON)': 'Телосложение измеряет здоровье, выносливость и жизненную силу. Проверки Телосложения редки, и никакие навыки не применяются к проверкам Телосложения, поскольку выносливость, которую представляет эта способность, в значительной степени пассивна, а не требует определенных усилий со стороны персонажа или монстра.', 
+                  'Ловкость (DEX)': 'Ловкость измеряет ловкость, рефлексы и равновесие. Проверка Ловкости может моделировать любую попытку двигаться проворно, быстро или тихо, или не упасть на сложной опоре. Навыки Акробатика, Ловкость рук и Скрытность отражают способности в определенных видах проверок Ловкости.', 
+                  'Интеллект (INT)': 'Интеллект измеряет остроту ума, точность воспоминаний и способность рассуждать. Проверка интеллекта вступает в игру, когда вам нужно опираться на логику, образование, память или дедуктивное мышление. Навыки Арканы, Истории, Расследования, Природы и Религии отражают способности в определенных видах проверок интеллекта.', 
+                  'Сила (STR)': 'Сила измеряет физическую мощь, спортивную подготовку и степень, в которой вы можете применить грубую физическую силу. Проверка Силы может моделировать любую попытку поднять, толкнуть, потянуть или сломать что-либо, заставить свое тело пройти через пространство или иным образом применить грубую силу в ситуации. Навык Атлетика отражает способности в определенных видах проверок Силы.', 
+                  'Мудрость (WIS)': "Мудрость отражает, насколько вы настроены на окружающий мир, и представляет собой восприимчивость и интуицию. Проверка Мудрости может отражать попытку прочитать язык тела, понять чьи-то чувства, заметить вещи в окружающей среде или позаботиться о раненом человеке. Навыки Обращение с животными, Проницательность, Медицина, Восприятие и Выживание отражают способности в определенных видах проверок Мудрости."}
+
+alignments = {'Хаотично-злой': 'Хаотично-злые (CE) существа действуют с произвольным насилием, подстегиваемые своей жадностью, ненавистью или жаждой крови. Демоны, красные драконы и орки являются хаотично-злыми.', 
+              'Хаотично-добрый': 'Хаотично-добрые (CG) существа действуют так, как им подсказывает совесть, мало заботясь о том, чего ожидают другие. Медные драконы, многие эльфы и единороги — хаотично-добрые.', 
+              'Хаотично-нейтральный': 'Хаотично-нейтральные (CN) существа следуют своим прихотям, ставя свою личную свободу превыше всего. Многие варвары и мошенники, а также некоторые барды являются хаотично-нейтральными.', 
+              'Законно-злой': 'Законно-злые (LE) существа методично берут то, что хотят, в рамках кодекса традиций, лояльности или порядка. Дьяволы, синие драконы и хобгоблины являются законно-злыми.', 
+              'Законно-добрый': 'Можно рассчитывать на законно-добрых (LG) существ, которые будут делать правильные вещи, как того ожидает общество. Золотые драконы, паладины и большинство гномов являются законно-добрыми.', 
+              'Законно-нейтральный.': 'Законно-нейтральные (LN) личности действуют в соответствии с законом, традицией или личными кодексами. Многие монахи и некоторые маги являются законно-нейтральными.', 
+              'Нейтральный': "Нейтральный (N) — мировоззрение тех, кто предпочитает держаться подальше от моральных вопросов и не принимать чью-либо сторону, делая то, что кажется лучшим в данный момент. Людоящеры, большинство друидов и многие люди нейтральны.", 
+              'Нейтрально-злой': 'Нейтрально-злое (NE) мировоззрение тех, кто делает все, что может сойти им с рук, без сострадания и угрызений совести. Многие дроу, некоторые облачные великаны и гоблины являются нейтрально-злыми.', 
+              'Нейтрально-добрый': 'Нейтрально-добрые (NG) люди делают все возможное, чтобы помочь другим в соответствии с их потребностями. Многие небожители, некоторые облачные гиганты и большинство гномов являются нейтрально-добрыми.'}
+
+alignments_to_ru ={'chaotic evil': 'Хаотично-злой', 'chaotic good': 'Хаотично-добрый', 'chaotic neutral': 'Хаотично-нейтральный', 'lawful evil': 'Законно-злой', 'lawful good': 'Законно-добрый', 'lawful neutral': 'Законно-нейтральный.', 'neutral': 'Нейтральный', 'neutral evil': 'Нейтрально-злой', 'neutral good': 'Нейтрально-добрый'}
+
+classes = {'Barbarian': 'hit die = 12. Choose two from Animal Handling, Athletics, Intimidation, Nature, Perception, and Survival. Skill: Animal Handling, Skill: Athletics, Skill: Intimidation, Skill: Nature, Skill: Perception, Skill: Survival,', 
+           'Bard': 'hit die = 8. Choose any three. Skill: Acrobatics, Skill: Animal Handling, Skill: Arcana, Skill: Athletics, Skill: Deception, Skill: History, Skill: Insight, Skill: Intimidation, Skill: Investigation, Skill: Medicine, Skill: Nature, Skill: Perception, Skill: Performance, Skill: Persuasion, Skill: Religion, Skill: Sleight of Hand, Skill: Stealth, Skill: Survival, Three musical instruments of your choice. Bagpipes, Drum, Dulcimer, Flute, Lute, Lyre, Horn, Pan flute, Shawm, Viol,', 
+           'Cleric': 'hit die = 8. Choose two from History, Insight, Medicine, Persuasion, and Religion. Skill: History, Skill: Insight, Skill: Medicine, Skill: Persuasion, Skill: Religion,', 
+           'Druid': 'hit die = 8. Choose two from Arcana, Animal Handling, Insight, Medicine, Nature, Perception, Religion, and Survival. Skill: Arcana, Skill: Animal Handling, Skill: Insight, Skill: Medicine, Skill: Nature, Skill: Perception, Skill: Religion, Skill: Survival,', 
+           'Fighter': 'hit die = 10. Choose two skills from Acrobatics, Animal Handling, Athletics, History, Insight, Intimidation, Perception, and Survival. Skill: Acrobatics, Skill: Animal Handling, Skill: Athletics, Skill: History, Skill: Insight, Skill: Intimidation, Skill: Perception, Skill: Survival,', 
+           'Monk': 'hit die = 8. Choose two from Acrobatics, Athletics, History, Insight, Religion, and Stealth. Skill: Acrobatics, Skill: Athletics, Skill: History, Skill: Insight, Skill: Religion, Skill: Stealth, Choose one type of artisan’s tools or one musical instrument.', 
+           'Paladin': 'hit die = 10. Choose two from Athletics, Insight, Intimidation, Medicine, Persuasion, and Religion. Skill: Athletics, Skill: Insight, Skill: Intimidation, Skill: Medicine, Skill: Persuasion, Skill: Religion,', 
+           'Ranger': 'hit die = 10. Choose three from Animal Handling, Athletics, Insight, Investigation, Nature, Perception, Stealth, and Survival. Skill: Animal Handling, Skill: Athletics, Skill: Insight, Skill: Investigation, Skill: Nature, Skill: Perception, Skill: Stealth, Skill: Survival,', 
+           'Rogue': 'hit die = 8. Choose four from Acrobatics, Athletics, Deception, Insight, Intimidation, Investigation, Perception, Performance, Persuasion, Sleight of Hand, and Stealth. Skill: Acrobatics, Skill: Athletics, Skill: Deception, Skill: Insight, Skill: Intimidation, Skill: Investigation, Skill: Perception, Skill: Performance, Skill: Persuasion, Skill: Sleight of Hand, Skill: Stealth,', 
+           'Sorcerer': 'hit die = 6. Choose two from Arcana, Deception, Insight, Intimidation, Persuasion, and Religion. Skill: Arcana, Skill: Deception, Skill: Insight, Skill: Intimidation, Skill: Persuasion, Skill: Religion,', 
+           'Warlock': 'hit die = 8. Choose two skills from Arcana, Deception, History, Intimidation, Investigation, Nature, and Religion. Skill: Arcana, Skill: Deception, Skill: History, Skill: Intimidation, Skill: Investigation, Skill: Nature, Skill: Religion,', 
+           'Wizard': 'hit die = 6. Choose two from Arcana, History, Insight, Investigation, Medicine, and Religion. Skill: Arcana, Skill: History, Skill: Insight, Skill: Investigation, Skill: Medicine, Skill: Religion,'}
+
+conditions = {'Слепота': "- A blinded creature can't see and automatically fails any ability check that requires sight. - Attack rolls against the creature have advantage, and the creature's attack rolls have disadvantage.", 
+              'Очарованность': "- A charmed creature can't attack the charmer or target the charmer with harmful abilities or magical effects. - The charmer has advantage on any ability check to interact socially with the creature.", 
+              'Глухота': "- A deafened creature can't hear and automatically fails any ability check that requires hearing.", 
+              'Истощение': "Some special abilities and environmental hazards, such as starvation and the long-term effects of freezing or scorching temperatures, can lead to a special condition called exhaustion. Exhaustion is measured in six levels. An effect can give a creature one or more levels of exhaustion, as specified in the effect's description. 1 - Disadvantage on ability checks 2 - Speed halved 3 - Disadvantage on attack rolls and saving throws 4 - Hit point maximum halved 5 - Speed reduced to 0 6 - Death If an already exhausted creature suffers another effect that causes exhaustion, its current level of exhaustion increases by the amount specified in the effect's description. A creature suffers the effect of its current level of exhaustion as well as all lower levels. For example, a creature suffering level 2 exhaustion has its speed halved and has disadvantage on ability checks. An effect that removes exhaustion reduces its level as specified in the effect's description, with all exhaustion effects ending if a creature's exhaustion level is reduced below 1. Finishing a long rest reduces a creature's exhaustion level by 1, provided that the creature has also ingested some food and drink.", 
+              'Испуганность': "- A frightened creature has disadvantage on ability checks and attack rolls while the source of its fear is within line of sight. - The creature can't willingly move closer to the source of its fear.", 
+              'Скованность': "- A grappled creature's speed becomes 0, and it can't benefit from any bonus to its speed. - The condition ends if the grappler is incapacitated (see the condition). - The condition also ends if an effect removes the grappled creature from the reach of the grappler or grappling effect, such as when a creature is hurled away by the thunderwave spell.", 
+              'Недееспособность': "- An incapacitated creature can't take actions or reactions.", 
+              'Невидимость': "- An invisible creature is impossible to see without the aid of magic or a special sense. For the purpose of hiding, the creature is heavily obscured. The creature's location can be detected by any noise it makes or any tracks it leaves. - Attack rolls against the creature have disadvantage, and the creature's attack rolls have advantage.", 
+              'Паралич': "- A paralyzed creature is incapacitated (see the condition) and can't move or speak. - The creature automatically fails Strength and Dexterity saving throws. - Attack rolls against the creature have advantage. - Any attack that hits the creature is a critical hit if the attacker is within 5 feet of the creature.", 
+              'Окаменевшесть': "- A petrified creature is transformed, along with any nonmagical object it is wearing or carrying, into a solid inanimate substance (usually stone). Its weight increases by a factor of ten, and it ceases aging. - The creature is incapacitated (see the condition), can't move or speak, and is unaware of its surroundings. - Attack rolls against the creature have advantage. - The creature automatically fails Strength and Dexterity saving throws. - The creature has resistance to all damage. - The creature is immune to poison and disease, although a poison or disease already in its system is suspended, not neutralized.", 
+              'Отравленность': '- A poisoned creature has disadvantage on attack rolls and ability checks.', 
+              'Лежачесть': "- Единственный вариант передвижения лежащего существа — ползать, если только оно не встает и тем самым не прекращает состояние. - У существа помеха при бросках атаки. - Бросок атаки против существа имеет преимущество, если атакующий находится в пределах 5 футов от существа. В противном случае бросок атаки имеет помеху.", 
+              'Обездвиживание': "- A restrained creature's speed becomes 0, and it can't benefit from any bonus to its speed. - Attack rolls against the creature have advantage, and the creature's attack rolls have disadvantage. - The creature has disadvantage on Dexterity saving throws.", 
+              'Шок': "- A stunned creature is incapacitated (see the condition), can't move, and can speak only falteringly. - The creature automatically fails Strength and Dexterity saving throws. - Attack rolls against the creature have advantage.", 
+              'Без сознания': "- An unconscious creature is incapacitated (see the condition), can't move or speak, and is unaware of its surroundings. - The creature drops whatever it's holding and falls prone. - The creature automatically fails Strength and Dexterity saving throws. - Attack rolls against the creature have advantage. - Any attack that hits the creature is a critical hit if the attacker is within 5 feet of the creature."}
+
+
+damage_types = {'Кислота': "Едкие брызги дыхания черного дракона и растворяющие ферменты, выделяемые черным толстячком", 
+                'Дробящий': 'Атаки тупым оружием, падения, сдавливание и тому подобное наносят дробящий урон.', 
+                'Холод': "Адский холод, исходящий от копья ледяного дьявола, и леденящий порыв дыхания белого дракона наносят урон холодом.", 
+                'Огонь': 'Красные драконы дышат огнем, и многие заклинания призывают пламя, наносящее урон огнем.', 
+                'Влияние': 'Влияние — это чистая магическая энергия, сфокусированная в разрушительную форму. Большинство эффектов, наносящих урон силой, — это заклинания, включая магическую ракету и духовное оружие.', 
+                'Молния': "Заклинание молнии и дыхание синего дракона наносят урон молнией.", 
+                'Некротический': 'Некротический урон, наносимый некоторыми видами нежити и такими заклинаниями, как «Ледяное прикосновение», иссушает материю и даже душу.', 
+                'Пронизывающий': "Колющие и пронзающие атаки, включая копья и укусы монстров, наносят колющий урон.", 
+                'Яд': "Ядовитые укусы и токсичный газ дыхания зеленого дракона наносят урон ядом.", 
+                'Психический': 'Ментальные способности, такие как псионический взрыв, наносят психический урон.', 
+                'Излучение': "Урон от излучения, наносимый заклинанием пламенного удара жреца или разящим оружием ангела, опаляет плоть, словно огонь, и перегружает дух силой.", 
+                'Режущий': "Мечи, топоры и когти монстров наносят рубящий урон.", 
+                'Гром': 'Сотрясающий звуковой взрыв, такой как эффект заклинания «Громовая волна», наносит урон громом.'}
+
+damage_types_ru = {'Acid': 'Кислота', 'Bludgeoning': 'Дробящий', 'Cold': 'Холод', 'Fire': 'Огонь', 'Force': 'Влияние', 'Lightning': 'Молния', 'Necrotic': 'Некротический', 'Piercing': 'Пронизывающий', 'Poison': 'Яд', 'Psychic': 'Психический', 'Radiant': 'Излучение', 'Slashing': 'Режущий', 'Thunder': 'Гром'}
+
+
+equipment_categories = {'Adventuring Gear': 'Снаряжение для приключений', 'Ammunition': 
+         'Боеприпасы', 'Arcane Foci': 'Чародейские фокусы', 
+         'Armor': 'Доспехи', "Artisan's Tools": 'Инструменты ремесленников', 
+         'Druidic Foci': 'Друидские фокусы', 'Equipment Packs': 'Пакеты снаряжения',
+         'Gaming Sets': 'Игровые наборы', 'Heavy Armor': 'Тяжёлая броня', 
+         'Holy Symbols': 'Священные символы', 'Kits': 'Наборы', 
+         'Land Vehicles': 'Наземная техника', 'Light Armor': 'Лёгкая броня', 
+         'Martial Melee Weapons': 'Боевое оружие ближнего боя', 
+         'Martial Ranged Weapons': 'Боевое оружие дальнего боя', 
+         'Martial Weapons': 'Боевое оружие', 'Medium Armor': 'Средняя броня', 
+         'Melee Weapons': 'Оружие ближнего боя', 'Mounts and Other Animals': 'Маунты и другие животные',
+         'Mounts and Vehicles': 'Маунты и транспорт', 'Musical Instruments': 'Музыкальные инструменты', 
+         'Other Tools': 'Другие инструменты', 'Potion': 'Зелье', 'Ranged Weapons': 'Оружие дальнего боя',
+         'Ring': 'Кольцо', 'Rod': 'Жезл', 'Scroll': 'Свиток','Shields': 'Щиты', 
+         'Simple Melee Weapons': 'Простое оружие ближнего боя', 'Simple Ranged Weapons': 'Простое оружие дальнего боя', 
+         'Simple Weapons': 'Простое оружие', 'Staff': 'Посох', 'Standard Gear': 'Стандартное снаряжение',
+         'Tack, Harness, and Drawn Vehicles': 'Упряжь, сбруя и гужевые повозки', 
+         'Tools': 'Инструменты', 'Wand': 'Палочка', 'Waterborne Vehicles': 'Водный транспорт',
+         'Weapon': 'Оружие', 'Wondrous Items': 'Чудесные предметы'}
+
+skills_ru = {'Ловкость': "Ловкость (акробатика) включает ваши попытки удержаться на ногах в сложных ситуациях, таких как бег по скользкому льду, балансирование на канате или стояние на палубе качающегося корабля. Ведущий игры может также потребовать проверки ловкости (акробатики), чтобы увидеть, можете ли вы выполнять акробатические трюки, включая нырки, кувырки, сальто и прыжки.", 
+             'Уход за животными': "Когда есть сомнения в том, можете ли вы успокоить домашнее животное, удержать скакуна от испуга или понять намерения животного, ведущий игры может потребовать проверку мудрости (уход за животными). Вы также совершаете проверку мудрости (уход за животными), чтобы контролировать свое скакуна при попытке рискованного маневра", 
+             'Магия': 'Интеллект (Аркана) измеряет вашу способность вспомнить знания о заклинаниях, магических предметах, странных символах, магических традициях, планах бытия и обитателях этих планов.', 
+             'Сила': 'Сила (атлетика) включает сложные ситуации, с которыми вы сталкиваетесь при лазании, прыжках или плавании.', 
+             'Хитрость': "Хитрость (обман) определяет, можете ли вы убедительно скрыть правду, как устно, так и через свои действия. Этот обман может охватывать все, начиная от введения других в заблуждение с помощью двусмысленности и заканчивая откровенной ложью. Типичные ситуации включают попытку заболтать стражника, обмануть торговца, заработать деньги через азартные игры, выдать себя за другого человека, уменьшить чьи-либо подозрения ложными заверениями или сохранять невозмутимость при явной лжи.", 
+             'История': 'История измеряет вашу способность вспоминать знания о исторических событиях, легендарных людях, древних королевствах, прошлых спорах, недавних войнах и исчезнувших цивилизациях.', 
+             'Проницательность': "Проницательность решает, можете ли вы определить истинные намерения существа, например, при поиске лжи или предсказании следующего хода кого-либо. Это включает в себя распознавание подсказок из языка тела, привычек речи и изменений в манерах.", 
+             'Запугивание': 'Когда вы пытаетесь повлиять на кого-то с помощью явных угроз, враждебных действий и физического насилия, ведущий игры может попросить вас сделать проверку харизмы (запугивание). Примеры включают попытку вытянуть информацию из заключенного, убедить уличных головорезов отступить от противостояния или использовать острый край разбитой бутылки, чтобы заставить усмехающегося визиря пересмотреть решение.', 
+             'Разборчивость': 'Когда вы ищете улики и делаете выводы на их основе, вы делаете проверку интеллекта (расследование). Вы можете догадаться о местоположении скрытого предмета, определить по внешнему виду раны, какое оружие нанесло её, или найти самое слабое место в туннеле, которое могло бы привести к его обрушению. Изучение древних свитков в поисках скрытого фрагмента знаний также может потребовать проверки интеллекта (расследование).', 
+             'Медицина': 'Медицина позволяет вам попытаться стабилизировать состояние умирающего товарища или диагностировать заболевание.', 
+             'Природа': 'Природа измеряет вашу способность вспоминать знания о местности, растениях и животных, погоде и природных циклах', 
+             'Восприятие': 'Восприятие позволяет вам заметить, услышать или иным образом обнаружить присутствие чего-либо. Она измеряет вашу общую осведомленность о происходящем вокруг и остроту ваших чувств. Например, вы можете попытаться услышать разговор через закрытую дверь, подслушать под открытым окном или услышать, как монстры крадутся по лесу. Или же вы можете попытаться заметить вещи, которые скрыты или легко пропустить, будь то орки, притаившиеся в засаде на дороге, бандиты, прячущиеся в тенях переулка, или свет свечи под закрытой секретной дверью.', 
+             'Эффективность': 'Эффективность определяет, насколько хорошо вы можете восхитить публику музыкой, танцами, актерской игрой, рассказыванием историй или другими формами развлечений.', 
+             'Убеждение': 'Когда вы пытаетесь повлиять на кого-то или группу людей тактом, социальными манерами или доброжелательностью, ведущий игры может попросить вас сделать проверку харизмы (убеждение). Обычно вы используете убеждение, когда действуете добросовестно, чтобы наладить дружеские отношения, сделать вежливые просьбы или продемонстрировать правильный этикет. Примеры убеждения других включают в себя убеждение камергера позволить вашей группе встретиться с королем, переговоры о мире между враждующими племенами или вдохновление толпы горожан.', 
+             'Религия': 'Религия измеряет вашу способность вспомнить знания о божествах, обрядах и молитвах, религиозных иерархиях, священных символах и практиках тайных культов.', 
+             'Ловкость рук': "Всякий раз, когда вы пытаетесь выполнить фокус или трюк руками, например, подложить что-то другому человеку или спрятать предмет на себе, совершите проверку ловкости (ловкость рук). Ведущий игры может также потребовать проверку ловкости (ловкость рук), чтобы определить, можете ли вы снять кошелек с монетами с другого человека или вытащить что-то из его кармана.", 
+             'Скрытность': 'Сделайте проверку ловкости (скрытность), когда вы пытаетесь скрыться от врагов, проскользнуть мимо стражников, ускользнуть незамеченным или подкрасться к кому-либо, не будучи увиденным или услышанным.', 
+             'Выживание': 'Ведущий игры может попросить вас сделать проверку мудрости (выживание), чтобы следовать следам, охотиться на дичь, провести вашу группу через замерзшие пустоши, определить признаки обитания рядом совомедведей, предсказать погоду или избежать зыбучих песков и других природных опасностей.'}
+
+subclasses = {'Berserker': "Класс: Barbarian, Subclass flavor: Primal Path, Описание: For some barbarians, rage is a means to an end--that end being violence. The Path of the Berserker is a path of untrammeled fury, slick with blood. As you enter the berserker's rage, you thrill in the chaos of battle, heedless of your own health or well-being.", 
+              'Champion': 'Класс: Fighter, Subclass flavor: Martial Archetype, Описание: The archetypal Champion focuses on the development of raw physical power honed to deadly perfection. Those who model themselves on this archetype combine rigorous training with physical excellence to deal devastating blows.', 
+              'Devotion': "Класс: Paladin, Subclass flavor: Sacred Oath, Описание: The Oath of Devotion binds a paladin to the loftiest ideals of justice, virtue, and order. Sometimes called cavaliers, white knights, or holy warriors, these paladins meet the ideal of the knight in shining armor, acting with honor in pursuit of justice and the greater good. They hold themselves to the highest standards of conduct, and some, for better or worse, hold the rest of the world to the same standards. Many who swear this oath are devoted to gods of law and good and use their gods' tenets as the measure of their devotion. They hold angels--the perfect servants of good--as their ideals, and incorporate images of angelic wings into their helmets or coats of arms.", 
+              'Draconic': 'Класс: Sorcerer, Subclass flavor: Sorcerous Origin, Описание: Your innate magic comes from draconic magic that was mingled with your blood or that of your ancestors. Most often, sorcerers with this origin trace their descent back to a mighty sorcerer of ancient times who made a bargain with a dragon or who might even have claimed a dragon parent. Some of these bloodlines are well established in the world, but most are obscure. Any given sorcerer could be the first of a new bloodline, as a result of a pact or some other exceptional circumstance.', 
+              'Evocation': 'Класс: Wizard, Subclass flavor: Arcane Tradition, Описание: You focus your study on magic that creates powerful elemental effects such as bitter cold, searing flame, rolling thunder, crackling lightning, and burning acid. Some evokers find employment in military forces, serving as artillery to blast enemy armies from afar. Others use their spectacular power to protect the weak, while some seek their own gain as bandits, adventurers, or aspiring tyrants.', 
+              'Fiend': "Класс: Warlock, Subclass flavor: Otherworldly Patron, Описание: You have made a pact with a fiend from the lower planes of existence, a being whose aims are evil, even if you strive against those aims. Such beings desire the corruption or destruction of all things, ultimately including you. Fiends powerful enough to forge a pact include demon lords such as Demogorgon, Orcus, Fraz'Urb-luu, and Baphomet; archdevils such as Asmodeus, Dispater, Mephistopheles, and Belial; pit fiends and balors that are especially mighty; and ultroloths and other lords of the yugoloths.", 
+              'Hunter': "Класс: Ranger, Subclass flavor: Ranger Archetype, Описание: Emulating the Hunter archetype means accepting your place as a bulwark between civilization and the terrors of the wilderness. As you walk the Hunter's path, you learn specialized techniques for fighting the threats you face, from rampaging ogres and hordes of orcs to towering giants and terrifying dragons.", 
+              'Land': "Класс: Druid, Subclass flavor: Druid Circle, Описание: The Circle of the Land is made up of mystics and sages who safeguard ancient knowledge and rites through a vast oral tradition. These druids meet within sacred circles of trees or standing stones to whisper primal secrets in Druidic. The circle's wisest members preside as the chief priests of communities that hold to the Old Faith and serve as advisors to the rulers of those folk. As a member of this circle, your magic is influenced by the land where you were initiated into the circle's mysterious rites.", 
+              'Life': 'Класс: Cleric, Subclass flavor: Divine Domain, Описание: The Life domain focuses on the vibrant positive energy--one of the fundamental forces of the universe--that sustains all life. The gods of life promote vitality and health through healing the sick and wounded, caring for those in need, and driving away the forces of death and undeath. Almost any non-evil deity can claim influence over this domain, particularly agricultural deities, sun gods, gods of healing or endurance, and gods of home and community.', 
+              'Lore': "Класс: Bard, Subclass flavor: Bard College, Описание: Bards of the College of Lore know something about most things, collecting bits of knowledge from sources as diverse as scholarly tomes and peasant tales. Whether singing folk ballads in taverns or elaborate compositions in royal courts, these bards use their gifts to hold audiences spellbound. When the applause dies down, the audience members might find themselves questioning everything they held to be true, from their faith in the priesthood of the local temple to their loyalty to the king. The loyalty of these bards lies in the pursuit of beauty and truth, not in fealty to a monarch or following the tenets of a deity. A noble who keeps such a bard as a herald or advisor knows that the bard would rather be honest than politic. The college's members gather in libraries and sometimes in actual colleges, complete with classrooms and dormitories, to share their lore with one another. They also meet at festivals or affairs of state, where they can expose corruption, unravel lies, and poke fun at self-important figures of authority.", 
+              'Open Hand': 'Класс: Monk, Subclass flavor: Monastic Tradition, Описание: Monks of the Way of the Open Hand are the ultimate masters of martial arts combat, whether armed or unarmed. They learn techniques to push and trip their opponents, manipulate ki to heal damage to their bodies, and practice advanced meditation that can protect them from harm.', 
+              'Thief': "Класс: Rogue, Subclass flavor: Roguish Archetype, Описание: You hone your skills in the larcenous arts. Burglars, bandits, cutpurses, and other criminals typically follow this archetype, but so do rogues who prefer to think of themselves as professional treasure seekers, explorers, delvers, and investigators. In addition to improving your agility and stealth, you learn skills useful for delving into ancient ruins, reading unfamiliar languages, and using magic items you normally couldn't employ."}
+
+equipment = pd.read_csv("static/data/equipment.csv")
+
+features = pd.read_csv("static/data/features.csv")
+
+magic_items = pd.read_csv("static/data/magic_items.csv")
+
+monsters = pd.read_csv("static/data/monsters.csv", delimiter=",")
+
+races = pd.read_csv("static/data/races.csv")
+
+spells = pd.read_csv("static/data/spells.csv")
+
+
+languagees = {'Abyssal': 'Тип: Exotic. Носители: Demons', 'Celestial': 'Тип: Exotic. Носители: Celestials', 'Common': 'Тип: Standard. Носители: Humans', 
+              'Deep Speech': 'Тип: Exotic. Носители: Aboleths, Cloakers', 'Draconic': 'Тип: Exotic. Носители: Dragons, Dragonborn', 'Dwarvish': 'Тип: Standard. Носители: Dwarves', 
+              'Elvish': 'Тип: Standard. Носители: Elves', 'Giant': 'Тип: Standard. Носители: Ogres, Giants', 'Gnomish': 'Тип: Standard. Носители: Gnomes', 
+              'Goblin': 'Тип: Standard. Носители: Goblinoids', 'Halfling': 'Тип: Standard. Носители: Halflings', 'Infernal': 'Тип: Exotic. Носители: Devils', 
+              'Orc': 'Тип: Standard. Носители: Orcs', 'Primordial': 'Тип: Exotic. Носители: Elementals', 'Sylvan': 'Тип: Exotic. Носители: Fey creatures', 
+              'Undercommon': 'Тип: Exotic. Носители: Underdark traders'}
+
+magic_schools = {'Отрицание': "Заклинания отрицания носят защитный характер, хотя некоторые из них могут использоваться и агрессивно. Они создают магические барьеры, нейтрализуют вредные эффекты, наносят вред нарушителям или изгоняют существ на другие планы бытия.",
+                 'Вызывание':"Заклинания вызывания связаны с перемещением объектов и существ из одного места в другое. Некоторые заклинания вызывают существ или объекты на сторону заклинателя, в то время как другие позволяют заклинателю телепортироваться в другое место. Некоторые вызывания создают объекты или эффекты из ничего.",          
+                 'Предсказание':"Заклинания предсказания открывают информацию, будь то секреты, давно забытые, проблески будущего, местонахождение скрытых вещей, истина за иллюзиями или видения далеких людей или мест.",
+                 'Очарование':"Заклинания очарования влияют на разум других, влияя на их поведение или контролируя его. Такие заклинания могут заставить врагов видеть заклинателя как друга, принуждать существ к определенному действию или даже управлять другим существом, как марионеткой.",
+                 'Вызов':"Заклинания вызова манипулируют магической энергией для создания желаемого эффекта. Некоторые вызывают взрывы огня или молнии. Другие направляют положительную энергию для исцеления ран.",
+                 'Иллюзия': "Заклинания иллюзии обманывают чувства или разум других. Они заставляют людей видеть то, чего нет, не замечать то, что есть, слышать фантомные звуки или помнить то, чего никогда не происходило. Некоторые иллюзии создают фантомные образы, которые может видеть любое существо, но наиболее коварные иллюзии внедряют образ прямо в разум существа.",
+                 'Некромания': "Заклинания Некромании манипулируют энергиями жизни и смерти. Такие заклинания могут предоставить дополнительный запас жизненной силы, истощать жизненную энергию из другого существа, создавать нежить или даже возвращать мертвых к жизни.",
+                 'Преобразование': "Заклинания преобразования изменяют свойства существа, объекта или окружающей среды. Они могут превратить врага в безобидное существо, усилить силу союзника, заставить объект двигаться по команде заклинателя или улучшить врожденные способности существа к быстрому восстановлению от ран."}
+
+rules = {'Adventuring': '# Adventuring\n', 
+         'Appendix': '# Appendix\n', 
+         'Combat': '# Combat\n', 
+         'Equipment': "# Equipment\n\nCommon coins come in several different denominations based on the relative worth of the metal from which they are made. The three most common coins are the gold piece (gp), the silver piece (sp), and the copper piece (cp).\n\nWith one gold piece, a character can buy a bedroll, 50 feet of good rope, or a goat. A skilled (but not exceptional) artisan can earn one gold piece a day. The old piece is the standard unit of measure for wealth, even if the coin itself is not commonly used. When merchants discuss deals that involve goods or services worth hundreds or thousands of gold pieces, the transactions don't usually involve the exchange of individual coins. Rather, the gold piece is a standard measure of value, and the actual exchange is in gold bars, letters of credit, or valuable goods.\n\nOne gold piece is worth ten silver pieces, the most prevalent coin among commoners. A silver piece buys a laborer's work for half a day, a flask of lamp oil, or a night's rest in a poor inn.\n\nOne silver piece is worth ten copper pieces, which are common among laborers and beggars. A single copper piece buys a candle, a torch, or a piece of chalk.\n\nIn addition, unusual coins made of other precious metals sometimes appear in treasure hoards. The electrum piece (ep) and the platinum piece (pp) originate from fallen empires and lost kingdoms, and they sometimes arouse suspicion and skepticism when used in transactions. An electrum piece is worth five silver pieces, and a platinum piece is worth ten gold pieces.\n\nA standard coin weighs about a third of an ounce, so fifty coins weigh a pound.\n", 'Spellcasting': '# Spellcasting\n\nMagic permeates fantasy gaming worlds and often appears in the form of a spell.\n\nThis chapter provides the rules for casting spells. Different character classes have distinctive ways of learning and preparing their spells, and monsters use spells in unique ways. Regardless of its source, a spell follows the rules here.\n', 
+         'Using Ability Scores': "# Using Ability Scores\n\nSix abilities provide a quick description of every creature's physical and mental characteristics:\n- **Strength**, measuring physical power\n- **Dexterity**, measuring agility\n- **Constitution**, measuring endurance\n- **Intelligence**, measuring reasoning and memory\n- **Wisdom**, measuring perception and insight\n- **Charisma**, measuring force of personality\n\nIs a character muscle-bound and insightful? Brilliant and charming? Nimble and hardy? Ability scores define these qualities-a creature's assets as well as weaknesses.\n\nThe three main rolls of the game-the ability check, the saving throw, and the attack roll-rely on the six ability scores. The book's introduction describes the basic rule behind these rolls: roll a d20, add an ability modifier derived from one of the six ability scores, and compare the total to a target number.\n\n**Ability Scores and Modifiers** Each of a creature's abilities has a score, a number that defines the magnitude of that ability. An ability score is not just a measure of innate capabilities, but also encompasses a creature's training and competence in activities related to that ability.\n\nA score of 10 or 11 is the normal human average, but adventurers and many monsters are a cut above average in most abilities. A score of 18 is the highest that a person usually reaches. Adventurers can have scores as high as 20, and monsters and divine beings can have scores as high as 30.\n\nEach ability also has a modifier, derived from the score and ranging from -5 (for an ability score of 1) to +10 (for a score of 30). The Ability Scores and Modifiers table notes the ability modifiers for the range of possible ability scores, from 1 to 30.\n"}
+
+sizes_ru = {"Medium": "Средний", "Large": "Огромный", "Tiny": "Крошечный", "Big": "Большой", "Little": "Маленький", "Small": "Маленький", "Giant": "Гигантский"}
+
+properties = {"Показатели способностей": ability_scores, "Мировозрения": alignments, "Классы": classes, "Условия": conditions, "Типы урона": damage_types, "Категории снаряжения": equipment_categories,
+              "Навыки": skills_ru, "Сабклассы": subclasses, "Языки": languagees, "Магические школы": magic_schools, "Правила": rules}
+
+long_properties = {"Снаряжение": equipment, "Особеннности": features, 
+                   "Магические предметы": magic_items, "Монстры": monsters,"Расы": races, "Заклинания":spells}
+
+
+def markdowned_text(data):
+    markdowned = ""
+    for i in range(data.shape[0]):
+        name = data["name"][i]
+        desc = data["desc"][i]
+        markdowned += f"""## {name}. \n{desc}  \n\n"""
+    return markdowned
+        

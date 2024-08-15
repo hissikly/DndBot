@@ -1,0 +1,949 @@
+ind,name,desc
+0,Abacus,"Категория снаряжения: Adventuring Gear. 
+Вес: 2. 
+Цена: 2 gp. 
+Описание: -"
+1,Acid (vial),"Категория снаряжения: Adventuring Gear. 
+Вес: 1. 
+Цена: 25 gp. 
+Описание: As an action, you can splash the contents of this vial onto a creature within 5 feet of you or throw the vial up to 20 feet, shattering it on impact. In either case, make a ranged attack against a creature or object, treating the acid as an improvised weapon. On a hit, the target takes 2d6 acid damage."
+2,Alchemist's fire (flask),"Категория снаряжения: Adventuring Gear. 
+Вес: 1. 
+Цена: 50 gp. 
+Описание: This sticky, adhesive fluid ignites when exposed to air. As an action, you can throw this flask up to 20 feet, shattering it on impact. Make a ranged attack against a creature or object, treating the alchemist's fire as an improvised weapon. On a hit, the target takes 1d4 fire damage at the start of each of its turns. A creature can end this damage by using its action to make a DC 10 Dexterity check to extinguish the flames."
+3,Alchemist's Supplies,"Категория снаряжения: Tools. 
+Вес: 8. 
+Цена: 50 gp. 
+Описание: These special tools include the items needed to pursue a craft or trade. The table shows examples of the most common types of tools, each providing items related to a single craft. Proficiency with a set of artisan's tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan's tools requires a separate proficiency."
+4,Alms box,"Категория снаряжения: Adventuring Gear. 
+Вес: 0. 
+Цена: 0 cp. 
+Описание: A small box for alms, typically found in a priest's pack."
+5,Amulet,"Категория снаряжения: Adventuring Gear. 
+Вес: 1. 
+Цена: 5 gp. 
+Описание: A holy symbol is a representation of a god or pantheon. It might be an amulet depicting a symbol representing a deity, the same symbol carefully engraved or inlaid as an emblem on a shield, or a tiny box holding a fragment of a sacred relic. Appendix B lists the symbols commonly associated with many gods in the multiverse. A cleric or paladin can use a holy symbol as a spellcasting focus. To use the symbol in this way, the caster must hold it in hand, wear it visibly, or bear it on a shield."
+6,Animal Feed (1 day),"Категория снаряжения: Mounts and Vehicles. 
+Вес: 10. 
+Цена: 5 cp. 
+Описание: -"
+7,Antitoxin (vial),"Категория снаряжения: Adventuring Gear. 
+Вес: 0. 
+Цена: 50 gp. 
+Описание: A creature that drinks this vial of liquid gains advantage on saving throws against poison for 1 hour. It confers no benefit to undead or constructs."
+8,Arrow,"Категория снаряжения: Adventuring Gear. 
+Вес: 1. 
+Цена: 1 gp. 
+Описание: -"
+9,Backpack,"Категория снаряжения: Adventuring Gear. 
+Вес: 5. 
+Цена: 2 gp. 
+Описание: -"
+10,Bagpipes,"Категория снаряжения: Tools. 
+Вес: 6. 
+Цена: 30 gp. 
+Описание: Several of the most common types of musical instruments are shown on the table as examples. If you have proficiency with a given musical instrument, you can add your proficiency bonus to any ability checks you make to play music with the instrument. A bard can use a musical instrument as a spellcasting focus. Each type of musical instrument requires a separate proficiency."
+11,"Ball bearings (bag of 1,000)","Категория снаряжения: Adventuring Gear. 
+Вес: 2. 
+Цена: 1 gp. 
+Описание: As an action, you can spill these tiny metal balls from their pouch to cover a level, square area that is 10 feet on a side. A creature moving across the covered area must succeed on a DC 10 Dexterity saving throw or fall prone. A creature moving through the area at half speed doesn't need to make the save."
+12,Barding: Breastplate,"Категория снаряжения: Mounts and Vehicles. 
+Вес: 40. 
+Цена: 1600 gp. 
+Описание: Barding is armor designed to protect an animal's head, neck, chest, and body. Any type of armor shown on the Armor table can be purchased as barding. The cost is four times the equivalent armor made for humanoids, and it weighs twice as much."
+13,Barding: Chain mail,"Категория снаряжения: Mounts and Vehicles. 
+Вес: 110. 
+Цена: 300 gp. 
+Описание: Barding is armor designed to protect an animal's head, neck, chest, and body. Any type of armor shown on the Armor table can be purchased as barding. The cost is four times the equivalent armor made for humanoids, and it weighs twice as much."
+14,Barding: Chain shirt,"Категория снаряжения: Mounts and Vehicles. 
+Вес: 40. 
+Цена: 200 gp. 
+Описание: Barding is armor designed to protect an animal's head, neck, chest, and body. Any type of armor shown on the Armor table can be purchased as barding. The cost is four times the equivalent armor made for humanoids, and it weighs twice as much."
+15,Barding: Half plate,"Категория снаряжения: Mounts and Vehicles. 
+Вес: 80. 
+Цена: 3000 gp. 
+Описание: Barding is armor designed to protect an animal's head, neck, chest, and body. Any type of armor shown on the Armor table can be purchased as barding. The cost is four times the equivalent armor made for humanoids, and it weighs twice as much."
+16,Barding: Hide,"Категория снаряжения: Mounts and Vehicles. 
+Вес: 24. 
+Цена: 40 gp. 
+Описание: Barding is armor designed to protect an animal's head, neck, chest, and body. Any type of armor shown on the Armor table can be purchased as barding. The cost is four times the equivalent armor made for humanoids, and it weighs twice as much."
+17,Barding: Leather,"Категория снаряжения: Mounts and Vehicles. 
+Вес: 20. 
+Цена: 40 gp. 
+Описание: Barding is armor designed to protect an animal's head, neck, chest, and body. Any type of armor shown on the Armor table can be purchased as barding. The cost is four times the equivalent armor made for humanoids, and it weighs twice as much."
+18,Barding: Padded,"Категория снаряжения: Mounts and Vehicles. 
+Вес: 16. 
+Цена: 20 gp. 
+Описание: Barding is armor designed to protect an animal's head, neck, chest, and body. Any type of armor shown on the Armor table can be purchased as barding. The cost is four times the equivalent armor made for humanoids, and it weighs twice as much."
+19,Barding: Plate,"Категория снаряжения: Mounts and Vehicles. 
+Вес: 130. 
+Цена: 6000 gp. 
+Описание: Barding is armor designed to protect an animal's head, neck, chest, and body. Any type of armor shown on the Armor table can be purchased as barding. The cost is four times the equivalent armor made for humanoids, and it weighs twice as much."
+20,Barding: Ring mail,"Категория снаряжения: Mounts and Vehicles. 
+Вес: 80. 
+Цена: 12 gp. 
+Описание: Barding is armor designed to protect an animal's head, neck, chest, and body. Any type of armor shown on the Armor table can be purchased as barding. The cost is four times the equivalent armor made for humanoids, and it weighs twice as much."
+21,Barding: Scale mail,"Категория снаряжения: Mounts and Vehicles. 
+Вес: 90. 
+Цена: 200 gp. 
+Описание: Barding is armor designed to protect an animal's head, neck, chest, and body. Any type of armor shown on the Armor table can be purchased as barding. The cost is four times the equivalent armor made for humanoids, and it weighs twice as much."
+22,Barding: Splint,"Категория снаряжения: Mounts and Vehicles. 
+Вес: 120. 
+Цена: 800 gp. 
+Описание: Barding is armor designed to protect an animal's head, neck, chest, and body. Any type of armor shown on the Armor table can be purchased as barding. The cost is four times the equivalent armor made for humanoids, and it weighs twice as much."
+23,Barding: Studded Leather,"Категория снаряжения: Mounts and Vehicles. 
+Вес: 26. 
+Цена: 180 gp. 
+Описание: Barding is armor designed to protect an animal's head, neck, chest, and body. Any type of armor shown on the Armor table can be purchased as barding. The cost is four times the equivalent armor made for humanoids, and it weighs twice as much."
+24,Barrel,"Категория снаряжения: Adventuring Gear. 
+Вес: 70. 
+Цена: 2 gp. 
+Описание: -"
+25,Basket,"Категория снаряжения: Adventuring Gear. 
+Вес: 2. 
+Цена: 4 sp. 
+Описание: -"
+26,Battleaxe,"Категория снаряжения: Weapon. 
+Вес: 4. 
+Цена: 10 gp. 
+Описание: -"
+27,Bedroll,"Категория снаряжения: Adventuring Gear. 
+Вес: 7. 
+Цена: 1 gp. 
+Описание: -"
+28,Bell,"Категория снаряжения: Adventuring Gear. 
+Вес: 0. 
+Цена: 1 gp. 
+Описание: -"
+29,Bit and bridle,"Категория снаряжения: Mounts and Vehicles. 
+Вес: 1. 
+Цена: 2 gp. 
+Описание: -"
+30,Blanket,"Категория снаряжения: Adventuring Gear. 
+Вес: 3. 
+Цена: 5 sp. 
+Описание: -"
+31,Block and tackle,"Категория снаряжения: Adventuring Gear. 
+Вес: 5. 
+Цена: 1 gp. 
+Описание: A set of pulleys with a cable threaded through them and a hook to attach to objects, a block and tackle allows you to hoist up to four times the weight you can normally lift."
+32,Block of incense,"Категория снаряжения: Adventuring Gear. 
+Вес: 0. 
+Цена: 0 cp. 
+Описание: A block of incense, typically found in a priest's pack."
+33,Blowgun,"Категория снаряжения: Weapon. 
+Вес: 1. 
+Цена: 10 gp. 
+Описание: -"
+34,Blowgun needle,"Категория снаряжения: Adventuring Gear. 
+Вес: 1. 
+Цена: 1 gp. 
+Описание: -"
+35,Book,"Категория снаряжения: Adventuring Gear. 
+Вес: 5. 
+Цена: 25 gp. 
+Описание: A book might contain poetry, historical accounts, information pertaining to a particular field of lore, diagrams and notes on gnomish contraptions, or just about anything else that can be represented using text or pictures. A book of spells is a spellbook (described later in this section)."
+36,"Bottle, glass","Категория снаряжения: Adventuring Gear. 
+Вес: 2. 
+Цена: 2 gp. 
+Описание: -"
+37,Breastplate,"Категория снаряжения: Armor. 
+Вес: 20. 
+Цена: 400 gp. 
+Описание: -"
+38,Brewer's Supplies,"Категория снаряжения: Tools. 
+Вес: 9. 
+Цена: 20 gp. 
+Описание: These special tools include the items needed to pursue a craft or trade. The table shows examples of the most common types of tools, each providing items related to a single craft. Proficiency with a set of artisan's tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan's tools requires a separate proficiency."
+39,Bucket,"Категория снаряжения: Adventuring Gear. 
+Вес: 2. 
+Цена: 5 cp. 
+Описание: -"
+40,Burglar's Pack,"Категория снаряжения: Adventuring Gear. 
+Вес: -. 
+Цена: 16 gp. 
+Описание: -"
+41,Calligrapher's Supplies,"Категория снаряжения: Tools. 
+Вес: 5. 
+Цена: 10 gp. 
+Описание: These special tools include the items needed to pursue a craft or trade. The table shows examples of the most common types of tools, each providing items related to a single craft. Proficiency with a set of artisan's tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan's tools requires a separate proficiency."
+42,Caltrops,"Категория снаряжения: Adventuring Gear. 
+Вес: 2. 
+Цена: 5 cp. 
+Описание: As an action, you can spread a bag of caltrops to cover a square area that is 5 feet on a side. Any creature that enters the area must succeed on a DC 15 Dexterity saving throw or stop moving this turn and take 1 piercing damage. Taking this damage reduces the creature's walking speed by 10 feet until the creature regains at least 1 hit point. A creature moving through the area at half speed doesn't need to make the save."
+43,Camel,"Категория снаряжения: Mounts and Vehicles. 
+Вес: -. 
+Цена: 50 gp. 
+Описание: -"
+44,Candle,"Категория снаряжения: Adventuring Gear. 
+Вес: 0. 
+Цена: 1 cp. 
+Описание: For 1 hour, a candle sheds bright light in a 5-foot radius and dim light for an additional 5 feet."
+45,Carpenter's Tools,"Категория снаряжения: Tools. 
+Вес: 6. 
+Цена: 8 gp. 
+Описание: These special tools include the items needed to pursue a craft or trade. The table shows examples of the most common types of tools, each providing items related to a single craft. Proficiency with a set of artisan's tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan's tools requires a separate proficiency."
+46,Carriage,"Категория снаряжения: Mounts and Vehicles. 
+Вес: 600. 
+Цена: 100 gp. 
+Описание: -"
+47,Cart,"Категория снаряжения: Mounts and Vehicles. 
+Вес: 200. 
+Цена: 15 gp. 
+Описание: -"
+48,Cartographer's Tools,"Категория снаряжения: Tools. 
+Вес: 6. 
+Цена: 15 gp. 
+Описание: These special tools include the items needed to pursue a craft or trade. The table shows examples of the most common types of tools, each providing items related to a single craft. Proficiency with a set of artisan's tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan's tools requires a separate proficiency."
+49,"Case, crossbow bolt","Категория снаряжения: Adventuring Gear. 
+Вес: 1. 
+Цена: 1 gp. 
+Описание: This wooden case can hold up to twenty crossbow bolts."
+50,"Case, map or scroll","Категория снаряжения: Adventuring Gear. 
+Вес: 1. 
+Цена: 1 gp. 
+Описание: This cylindrical leather case can hold up to ten rolled-up sheets of paper or five rolled-up sheets of parchment."
+51,Censer,"Категория снаряжения: Adventuring Gear. 
+Вес: 0. 
+Цена: 0 cp. 
+Описание: A censer, typically found in a priest's pack."
+52,Chain (10 feet),"Категория снаряжения: Adventuring Gear. 
+Вес: 10. 
+Цена: 5 gp. 
+Описание: A chain has 10 hit points. It can be burst with a successful DC 20 Strength check."
+53,Chain Mail,"Категория снаряжения: Armor. 
+Вес: 55. 
+Цена: 75 gp. 
+Описание: -"
+54,Chain Shirt,"Категория снаряжения: Armor. 
+Вес: 20. 
+Цена: 50 gp. 
+Описание: -"
+55,Chalk (1 piece),"Категория снаряжения: Adventuring Gear. 
+Вес: 0. 
+Цена: 1 cp. 
+Описание: -"
+56,Chariot,"Категория снаряжения: Mounts and Vehicles. 
+Вес: 100. 
+Цена: 250 gp. 
+Описание: -"
+57,Chest,"Категория снаряжения: Adventuring Gear. 
+Вес: 25. 
+Цена: 5 gp. 
+Описание: -"
+58,Climber's Kit,"Категория снаряжения: Adventuring Gear. 
+Вес: 12. 
+Цена: 25 gp. 
+Описание: A climber's kit includes special pitons, boot tips, gloves, and a harness. You can use the climber's kit as an action to anchor yourself; when you do, you can't fall more than 25 feet from the point where you anchored yourself, and you can't climb more than 25 feet away from that point without undoing the anchor."
+59,"Clothes, common","Категория снаряжения: Adventuring Gear. 
+Вес: 3. 
+Цена: 5 sp. 
+Описание: -"
+60,"Clothes, costume","Категория снаряжения: Adventuring Gear. 
+Вес: 4. 
+Цена: 5 gp. 
+Описание: -"
+61,"Clothes, fine","Категория снаряжения: Adventuring Gear. 
+Вес: 6. 
+Цена: 15 gp. 
+Описание: -"
+62,"Clothes, traveler's","Категория снаряжения: Adventuring Gear. 
+Вес: 4. 
+Цена: 2 gp. 
+Описание: -"
+63,Club,"Категория снаряжения: Weapon. 
+Вес: 2. 
+Цена: 1 sp. 
+Описание: -"
+64,Cobbler's Tools,"Категория снаряжения: Tools. 
+Вес: 5. 
+Цена: 5 gp. 
+Описание: These special tools include the items needed to pursue a craft or trade. The table shows examples of the most common types of tools, each providing items related to a single craft. Proficiency with a set of artisan's tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan's tools requires a separate proficiency."
+65,Component pouch,"Категория снаряжения: Adventuring Gear. 
+Вес: 2. 
+Цена: 25 gp. 
+Описание:  A component pouch is a small, watertight leather belt pouch that has compartments to hold all the material components and other special items you need to cast your spells, except for those components that have a specific cost (as indicated in a spell's description)."
+66,Cook's utensils,"Категория снаряжения: Tools. 
+Вес: 8. 
+Цена: 1 gp. 
+Описание: These special tools include the items needed to pursue a craft or trade. The table shows examples of the most common types of tools, each providing items related to a single craft. Proficiency with a set of artisan's tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan's tools requires a separate proficiency."
+67,Crossbow bolt,"Категория снаряжения: Adventuring Gear. 
+Вес: 1.5. 
+Цена: 1 gp. 
+Описание: -"
+68,"Crossbow, hand","Категория снаряжения: Weapon. 
+Вес: 3. 
+Цена: 75 gp. 
+Описание: -"
+69,"Crossbow, heavy","Категория снаряжения: Weapon. 
+Вес: 18. 
+Цена: 50 gp. 
+Описание: -"
+70,"Crossbow, light","Категория снаряжения: Weapon. 
+Вес: 5. 
+Цена: 25 gp. 
+Описание: -"
+71,Crowbar,"Категория снаряжения: Adventuring Gear. 
+Вес: 5. 
+Цена: 2 gp. 
+Описание: Using a crowbar grants advantage to Strength checks where the crowbar's leverage can be applied."
+72,Crystal,"Категория снаряжения: Adventuring Gear. 
+Вес: 1. 
+Цена: 10 gp. 
+Описание: An arcane focus is a special item--an orb, a crystal, a rod, a specially constructed staff, a wand-like length of wood, or some similar item--designed to channel the power of arcane spells. A sorcerer, warlock, or wizard can use such an item as a spellcasting focus."
+73,Dagger,"Категория снаряжения: Weapon. 
+Вес: 1. 
+Цена: 2 gp. 
+Описание: -"
+74,Dart,"Категория снаряжения: Weapon. 
+Вес: 0.25. 
+Цена: 5 cp. 
+Описание: -"
+75,Dice Set,"Категория снаряжения: Tools. 
+Вес: 0. 
+Цена: 1 sp. 
+Описание: This item encompasses a wide range of game pieces, including dice and decks of cards (for games such as Three-Dragon Ante). A few common examples appear on the Tools table, but other kinds of gaming sets exist. If you are proficient with a gaming set, you can add your proficiency bonus to ability checks you make to play a game with that set. Each type of gaming set requires a separate proficiency."
+76,Diplomat's Pack,"Категория снаряжения: Adventuring Gear. 
+Вес: -. 
+Цена: 39 gp. 
+Описание: -"
+77,Disguise Kit,"Категория снаряжения: Adventuring Gear. 
+Вес: 3. 
+Цена: 25 gp. 
+Описание: This pouch of cosmetics, hair dye, and small props lets you create disguises that change your physical appearance. Proficiency with this kit lets you add your proficiency bonus to any ability checks you make to create a visual disguise."
+78,Donkey,"Категория снаряжения: Mounts and Vehicles. 
+Вес: -. 
+Цена: 8 gp. 
+Описание: -"
+79,Drum,"Категория снаряжения: Tools. 
+Вес: 3. 
+Цена: 6 gp. 
+Описание: Several of the most common types of musical instruments are shown on the table as examples. If you have proficiency with a given musical instrument, you can add your proficiency bonus to any ability checks you make to play music with the instrument. A bard can use a musical instrument as a spellcasting focus. Each type of musical instrument requires a separate proficiency."
+80,Dulcimer,"Категория снаряжения: Tools. 
+Вес: 10. 
+Цена: 25 gp. 
+Описание: Several of the most common types of musical instruments are shown on the table as examples. If you have proficiency with a given musical instrument, you can add your proficiency bonus to any ability checks you make to play music with the instrument. A bard can use a musical instrument as a spellcasting focus. Each type of musical instrument requires a separate proficiency."
+81,Dungeoneer's Pack,"Категория снаряжения: Adventuring Gear. 
+Вес: -. 
+Цена: 12 gp. 
+Описание: -"
+82,Elephant,"Категория снаряжения: Mounts and Vehicles. 
+Вес: -. 
+Цена: 200 gp. 
+Описание: -"
+83,Emblem,"Категория снаряжения: Adventuring Gear. 
+Вес: 0. 
+Цена: 5 gp. 
+Описание: A holy symbol is a representation of a god or pantheon. It might be an amulet depicting a symbol representing a deity, the same symbol carefully engraved or inlaid as an emblem on a shield, or a tiny box holding a fragment of a sacred relic. Appendix B lists the symbols commonly associated with many gods in the multiverse. A cleric or paladin can use a holy symbol as a spellcasting focus. To use the symbol in this way, the caster must hold it in hand, wear it visibly, or bear it on a shield."
+84,Entertainer's Pack,"Категория снаряжения: Adventuring Gear. 
+Вес: -. 
+Цена: 40 gp. 
+Описание: -"
+85,Explorer's Pack,"Категория снаряжения: Adventuring Gear. 
+Вес: -. 
+Цена: 10 gp. 
+Описание: -"
+86,Fishing tackle,"Категория снаряжения: Adventuring Gear. 
+Вес: 4. 
+Цена: 1 gp. 
+Описание: This kit includes a wooden rod, silken line, corkwood bobbers, steel hooks, lead sinkers, velvet lures, and narrow netting."
+87,Flail,"Категория снаряжения: Weapon. 
+Вес: 2. 
+Цена: 10 gp. 
+Описание: -"
+88,Flask or tankard,"Категория снаряжения: Adventuring Gear. 
+Вес: 1. 
+Цена: 2 cp. 
+Описание: -"
+89,Flute,"Категория снаряжения: Tools. 
+Вес: 1. 
+Цена: 2 gp. 
+Описание: Several of the most common types of musical instruments are shown on the table as examples. If you have proficiency with a given musical instrument, you can add your proficiency bonus to any ability checks you make to play music with the instrument. A bard can use a musical instrument as a spellcasting focus. Each type of musical instrument requires a separate proficiency."
+90,Forgery Kit,"Категория снаряжения: Adventuring Gear. 
+Вес: 5. 
+Цена: 15 gp. 
+Описание: This small box contains a variety of papers and parchments, pens and inks, seals and sealing wax, gold and silver leaf, and other supplies necessary to create convincing forgeries of physical documents. Proficiency with this kit lets you add your proficiency bonus to any ability checks you make to create a physical forgery of a document."
+91,Galley,"Категория снаряжения: Mounts and Vehicles. 
+Вес: -. 
+Цена: 30000 gp. 
+Описание: -"
+92,Glaive,"Категория снаряжения: Weapon. 
+Вес: 6. 
+Цена: 20 gp. 
+Описание: -"
+93,Glassblower's Tools,"Категория снаряжения: Tools. 
+Вес: 5. 
+Цена: 30 gp. 
+Описание: These special tools include the items needed to pursue a craft or trade. The table shows examples of the most common types of tools, each providing items related to a single craft. Proficiency with a set of artisan's tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan's tools requires a separate proficiency."
+94,Grappling hook,"Категория снаряжения: Adventuring Gear. 
+Вес: 4. 
+Цена: 2 gp. 
+Описание: -"
+95,Greataxe,"Категория снаряжения: Weapon. 
+Вес: 7. 
+Цена: 30 gp. 
+Описание: -"
+96,Greatclub,"Категория снаряжения: Weapon. 
+Вес: 10. 
+Цена: 2 sp. 
+Описание: -"
+97,Greatsword,"Категория снаряжения: Weapon. 
+Вес: 6. 
+Цена: 50 gp. 
+Описание: -"
+98,Halberd,"Категория снаряжения: Weapon. 
+Вес: 6. 
+Цена: 20 gp. 
+Описание: -"
+99,Half Plate Armor,"Категория снаряжения: Armor. 
+Вес: 40. 
+Цена: 750 gp. 
+Описание: -"
+100,Hammer,"Категория снаряжения: Adventuring Gear. 
+Вес: 3. 
+Цена: 1 gp. 
+Описание: -"
+101,"Hammer, sledge","Категория снаряжения: Adventuring Gear. 
+Вес: 10. 
+Цена: 2 gp. 
+Описание: -"
+102,Handaxe,"Категория снаряжения: Weapon. 
+Вес: 2. 
+Цена: 5 gp. 
+Описание: -"
+103,Healer's Kit,"Категория снаряжения: Adventuring Gear. 
+Вес: 3. 
+Цена: 5 gp. 
+Описание: This kit is a leather pouch containing bandages, salves, and splints. The kit has ten uses. As an action, you can expend one use of the kit to stabilize a creature that has 0 hit points, without needing to make a Wisdom (Medicine) check."
+104,Herbalism Kit,"Категория снаряжения: Adventuring Gear. 
+Вес: 3. 
+Цена: 5 gp. 
+Описание: This kit contains a variety of instruments such as clippers, mortar and pestle, and pouches and vials used by herbalists to create remedies and potions. Proficiency with this kit lets you add your proficiency bonus to any ability checks you make to identify or apply herbs. Also, proficiency with this kit is required to create antitoxin and potions of healing."
+105,Hide Armor,"Категория снаряжения: Armor. 
+Вес: 12. 
+Цена: 10 gp. 
+Описание: -"
+106,Holy water (flask),"Категория снаряжения: Adventuring Gear. 
+Вес: 1. 
+Цена: 25 gp. 
+Описание: As an action, you can splash the contents of this flask onto a creature within 5 feet of you or throw it up to 20 feet, shattering it on impact. In either case, make a ranged attack against a target creature, treating the holy water as an improvised weapon. If the target is a fiend or undead, it takes 2d6 radiant damage. A cleric or paladin may create holy water by performing a special ritual. The ritual takes 1 hour to perform, uses 25 gp worth of powdered silver, and requires the caster to expend a 1st-level spell slot."
+107,Horn,"Категория снаряжения: Tools. 
+Вес: 2. 
+Цена: 3 gp. 
+Описание: Several of the most common types of musical instruments are shown on the table as examples. If you have proficiency with a given musical instrument, you can add your proficiency bonus to any ability checks you make to play music with the instrument. A bard can use a musical instrument as a spellcasting focus. Each type of musical instrument requires a separate proficiency."
+108,"Horse, draft","Категория снаряжения: Mounts and Vehicles. 
+Вес: -. 
+Цена: 50 gp. 
+Описание: -"
+109,"Horse, riding","Категория снаряжения: Mounts and Vehicles. 
+Вес: -. 
+Цена: 75 gp. 
+Описание: -"
+110,Hourglass,"Категория снаряжения: Adventuring Gear. 
+Вес: 1. 
+Цена: 25 gp. 
+Описание: -"
+111,Hunting trap,"Категория снаряжения: Adventuring Gear. 
+Вес: 25. 
+Цена: 5 gp. 
+Описание: When you use your action to set it, this trap forms a saw-toothed steel ring that snaps shut when a creature steps on a pressure plate in the center. The trap is affixed by a heavy chain to an immobile object, such as a tree or a spike driven into the ground. A creature that steps on the plate must succeed on a DC 13 Dexterity saving throw or take 1d4 piercing damage and stop moving. Thereafter, until the creature breaks free of the trap, its movement is limited by the length of the chain (typically 3 feet long). A creature can use its action to make a DC 13 Strength check, freeing itself or another creature within its reach on a success. Each failed check deals 1 piercing damage to the trapped creature."
+112,Ink (1 ounce bottle),"Категория снаряжения: Adventuring Gear. 
+Вес: 0. 
+Цена: 10 gp. 
+Описание: -"
+113,Ink pen,"Категория снаряжения: Adventuring Gear. 
+Вес: 0. 
+Цена: 2 cp. 
+Описание: -"
+114,Javelin,"Категория снаряжения: Weapon. 
+Вес: 2. 
+Цена: 5 sp. 
+Описание: -"
+115,Jeweler's Tools,"Категория снаряжения: Tools. 
+Вес: 2. 
+Цена: 25 gp. 
+Описание: These special tools include the items needed to pursue a craft or trade. The table shows examples of the most common types of tools, each providing items related to a single craft. Proficiency with a set of artisan's tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan's tools requires a separate proficiency."
+116,Jug or pitcher,"Категория снаряжения: Adventuring Gear. 
+Вес: 4. 
+Цена: 2 cp. 
+Описание: -"
+117,Keelboat,"Категория снаряжения: Mounts and Vehicles. 
+Вес: -. 
+Цена: 3000 gp. 
+Описание: Keelboats and rowboats are used on lakes and rivers. If going downstream, add the speed of the current (typically 3 miles per hour) to the speed of the vehicle. These vehicles can't be rowed against any significant current, but they can be pulled upstream by draft animals on the shores. A rowboat weighs 100 pounds, in case adventurers carry it over land."
+118,Ladder (10-foot),"Категория снаряжения: Adventuring Gear. 
+Вес: 25. 
+Цена: 1 sp. 
+Описание: -"
+119,Lamp,"Категория снаряжения: Adventuring Gear. 
+Вес: 1. 
+Цена: 5 sp. 
+Описание: A lamp casts bright light in a 15-foot radius and dim light for an additional 30 feet. Once lit, it burns for 6 hours on a flask (1 pint) of oil."
+120,Lance,"Категория снаряжения: Weapon. 
+Вес: 6. 
+Цена: 10 gp. 
+Описание: -"
+121,"Lantern, bullseye","Категория снаряжения: Adventuring Gear. 
+Вес: 2. 
+Цена: 10 gp. 
+Описание: A bullseye lantern casts bright light in a 60-foot cone and dim light for an additional 60 feet. Once lit, it burns for 6 hours on a flask (1 pint) of oil."
+122,"Lantern, hooded","Категория снаряжения: Adventuring Gear. 
+Вес: 2. 
+Цена: 5 gp. 
+Описание: A hooded lantern casts bright light in a 30-foot radius and dim light for an additional 30 feet. Once lit, it burns for 6 hours on a flask (1 pint) of oil. As an action, you can lower the hood, reducing the light to dim light in a 5-foot radius."
+123,Leather Armor,"Категория снаряжения: Armor. 
+Вес: 10. 
+Цена: 10 gp. 
+Описание: -"
+124,Leatherworker's Tools,"Категория снаряжения: Tools. 
+Вес: 5. 
+Цена: 5 gp. 
+Описание: These special tools include the items needed to pursue a craft or trade. The table shows examples of the most common types of tools, each providing items related to a single craft. Proficiency with a set of artisan's tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan's tools requires a separate proficiency."
+125,Light hammer,"Категория снаряжения: Weapon. 
+Вес: 2. 
+Цена: 2 gp. 
+Описание: -"
+126,Little bag of sand,"Категория снаряжения: Adventuring Gear. 
+Вес: 0. 
+Цена: 0 cp. 
+Описание: A small bag of sand, typically found in a scholar's pack."
+127,Lock,"Категория снаряжения: Adventuring Gear. 
+Вес: 1. 
+Цена: 10 gp. 
+Описание: A key is provided with the lock. Without the key, a creature proficient with thieves' tools can pick this lock with a successful DC 15 Dexterity check. Your GM may decide that better locks are available for higher prices."
+128,Longbow,"Категория снаряжения: Weapon. 
+Вес: 2. 
+Цена: 50 gp. 
+Описание: -"
+129,Longship,"Категория снаряжения: Mounts and Vehicles. 
+Вес: -. 
+Цена: 10000 gp. 
+Описание: -"
+130,Longsword,"Категория снаряжения: Weapon. 
+Вес: 3. 
+Цена: 15 gp. 
+Описание: -"
+131,Lute,"Категория снаряжения: Tools. 
+Вес: 2. 
+Цена: 35 gp. 
+Описание: Several of the most common types of musical instruments are shown on the table as examples. If you have proficiency with a given musical instrument, you can add your proficiency bonus to any ability checks you make to play music with the instrument. A bard can use a musical instrument as a spellcasting focus. Each type of musical instrument requires a separate proficiency."
+132,Lyre,"Категория снаряжения: Tools. 
+Вес: 2. 
+Цена: 30 gp. 
+Описание: Several of the most common types of musical instruments are shown on the table as examples. If you have proficiency with a given musical instrument, you can add your proficiency bonus to any ability checks you make to play music with the instrument. A bard can use a musical instrument as a spellcasting focus. Each type of musical instrument requires a separate proficiency."
+133,Mace,"Категория снаряжения: Weapon. 
+Вес: 4. 
+Цена: 5 gp. 
+Описание: -"
+134,Magnifying glass,"Категория снаряжения: Adventuring Gear. 
+Вес: 0. 
+Цена: 100 gp. 
+Описание: This lens allows a closer look at small objects. It is also useful as a substitute for flint and steel when starting fires. Lighting a fire with a magnifying glass requires light as bright as sunlight to focus, tinder to ignite, and about 5 minutes for the fire to ignite. A magnifying glass grants advantage on any ability check made to appraise or inspect an item that is small or highly detailed."
+135,Manacles,"Категория снаряжения: Adventuring Gear. 
+Вес: 6. 
+Цена: 2 gp. 
+Описание: These metal restraints can bind a Small or Medium creature. Escaping the manacles requires a successful DC 20 Dexterity check. Breaking them requires a successful DC 20 Strength check. Each set of manacles comes with one key. Without the key, a creature proficient with thieves' tools can pick the manacles' lock with a successful DC 15 Dexterity check. Manacles have 15 hit points."
+136,Mason's Tools,"Категория снаряжения: Tools. 
+Вес: 8. 
+Цена: 10 gp. 
+Описание: These special tools include the items needed to pursue a craft or trade. The table shows examples of the most common types of tools, each providing items related to a single craft. Proficiency with a set of artisan's tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan's tools requires a separate proficiency."
+137,Mastiff,"Категория снаряжения: Mounts and Vehicles. 
+Вес: -. 
+Цена: 25 gp. 
+Описание: -"
+138,Maul,"Категория снаряжения: Weapon. 
+Вес: 10. 
+Цена: 10 gp. 
+Описание: -"
+139,Mess Kit,"Категория снаряжения: Adventuring Gear. 
+Вес: 1. 
+Цена: 2 sp. 
+Описание: This tin box contains a cup and simple cutlery. The box clamps together, and one side can be used as a cooking pan and the other as a plate or shallow bowl."
+140,"Mirror, steel","Категория снаряжения: Adventuring Gear. 
+Вес: 0.5. 
+Цена: 5 gp. 
+Описание: -"
+141,Morningstar,"Категория снаряжения: Weapon. 
+Вес: 4. 
+Цена: 15 gp. 
+Описание: -"
+142,Mule,"Категория снаряжения: Mounts and Vehicles. 
+Вес: -. 
+Цена: 8 gp. 
+Описание: -"
+143,Navigator's Tools,"Категория снаряжения: Tools. 
+Вес: 2. 
+Цена: 25 gp. 
+Описание: This set of instruments is used for navigation at sea. Proficiency with navigator's tools lets you chart a ship's course and follow navigation charts. In addition, these tools allow you to add your proficiency bonus to any ability check you make to avoid getting lost at sea."
+144,Net,"Категория снаряжения: Weapon. 
+Вес: 3. 
+Цена: 1 gp. 
+Описание: -"
+145,Oil (flask),"Категория снаряжения: Adventuring Gear. 
+Вес: 1. 
+Цена: 1 sp. 
+Описание: Oil usually comes in a clay flask that holds 1 pint. As an action, you can splash the oil in this flask onto a creature within 5 feet of you or throw it up to 20 feet, shattering it on impact. Make a ranged attack against a target creature or object, treating the oil as an improvised weapon. On a hit, the target is covered in oil. If the target takes any fire damage before the oil dries (after 1 minute), the target takes an additional 5 fire damage from the burning oil. You can also pour a flask of oil on the ground to cover a 5-foot-square area, provided that the surface is level. If lit, the oil burns for 2 rounds and deals 5 fire damage to any creature that enters the area or ends its turn in the area. A creature can take this damage only once per turn."
+146,Orb,"Категория снаряжения: Adventuring Gear. 
+Вес: 3. 
+Цена: 20 gp. 
+Описание: An arcane focus is a special item--an orb, a crystal, a rod, a specially constructed staff, a wand-like length of wood, or some similar item--designed to channel the power of arcane spells. A sorcerer, warlock, or wizard can use such an item as a spellcasting focus."
+147,Padded Armor,"Категория снаряжения: Armor. 
+Вес: 8. 
+Цена: 5 gp. 
+Описание: -"
+148,Painter's Supplies,"Категория снаряжения: Tools. 
+Вес: 5. 
+Цена: 10 gp. 
+Описание: These special tools include the items needed to pursue a craft or trade. The table shows examples of the most common types of tools, each providing items related to a single craft. Proficiency with a set of artisan's tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan's tools requires a separate proficiency."
+149,Pan flute,"Категория снаряжения: Tools. 
+Вес: 2. 
+Цена: 12 gp. 
+Описание: Several of the most common types of musical instruments are shown on the table as examples. If you have proficiency with a given musical instrument, you can add your proficiency bonus to any ability checks you make to play music with the instrument. A bard can use a musical instrument as a spellcasting focus. Each type of musical instrument requires a separate proficiency."
+150,Paper (one sheet),"Категория снаряжения: Adventuring Gear. 
+Вес: 0. 
+Цена: 2 sp. 
+Описание: -"
+151,Parchment (one sheet),"Категория снаряжения: Adventuring Gear. 
+Вес: 0. 
+Цена: 1 sp. 
+Описание: -"
+152,Perfume (vial),"Категория снаряжения: Adventuring Gear. 
+Вес: 0. 
+Цена: 5 gp. 
+Описание: -"
+153,"Pick, miner's","Категория снаряжения: Adventuring Gear. 
+Вес: 10. 
+Цена: 2 gp. 
+Описание: -"
+154,Pike,"Категория снаряжения: Weapon. 
+Вес: 18. 
+Цена: 5 gp. 
+Описание: -"
+155,Piton,"Категория снаряжения: Adventuring Gear. 
+Вес: 0.25. 
+Цена: 5 cp. 
+Описание: -"
+156,Plate Armor,"Категория снаряжения: Armor. 
+Вес: 65. 
+Цена: 1500 gp. 
+Описание: -"
+157,Playing Card Set,"Категория снаряжения: Tools. 
+Вес: 0. 
+Цена: 5 sp. 
+Описание: This item encompasses a wide range of game pieces, including dice and decks of cards (for games such as Three-Dragon Ante). A few common examples appear on the Tools table, but other kinds of gaming sets exist. If you are proficient with a gaming set, you can add your proficiency bonus to ability checks you make to play a game with that set. Each type of gaming set requires a separate proficiency."
+158,"Poison, basic (vial)","Категория снаряжения: Adventuring Gear. 
+Вес: 0. 
+Цена: 100 gp. 
+Описание: You can use the poison in this vial to coat one slashing or piercing weapon or up to three pieces of ammunition. Applying the poison takes an action. A creature hit by the poisoned weapon or ammunition must make a DC 10 Constitution saving throw or take 1d4 poison damage. Once applied, the poison retains potency for 1 minute before drying."
+159,Poisoner's Kit,"Категория снаряжения: Adventuring Gear. 
+Вес: 2. 
+Цена: 50 gp. 
+Описание: A poisoner's kit includes the vials, chemicals, and other equipment necessary for the creation of poisons. Proficiency with this kit lets you add your proficiency bonus to any ability checks you make to craft or use poisons."
+160,Pole (10-foot),"Категория снаряжения: Adventuring Gear. 
+Вес: 7. 
+Цена: 5 cp. 
+Описание: -"
+161,Pony,"Категория снаряжения: Mounts and Vehicles. 
+Вес: -. 
+Цена: 30 gp. 
+Описание: -"
+162,"Pot, iron","Категория снаряжения: Adventuring Gear. 
+Вес: 10. 
+Цена: 2 gp. 
+Описание: -"
+163,Potter's Tools,"Категория снаряжения: Tools. 
+Вес: 3. 
+Цена: 10 gp. 
+Описание: These special tools include the items needed to pursue a craft or trade. The table shows examples of the most common types of tools, each providing items related to a single craft. Proficiency with a set of artisan's tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan's tools requires a separate proficiency."
+164,Pouch,"Категория снаряжения: Adventuring Gear. 
+Вес: 1. 
+Цена: 5 sp. 
+Описание: A cloth or leather pouch can hold up to 20 sling bullets or 50 blowgun needles, among other things. A compartmentalized pouch for holding spell components is called a component pouch (described earlier in this section)."
+165,Priest's Pack,"Категория снаряжения: Adventuring Gear. 
+Вес: -. 
+Цена: 19 gp. 
+Описание: -"
+166,Quarterstaff,"Категория снаряжения: Weapon. 
+Вес: 4. 
+Цена: 2 sp. 
+Описание: -"
+167,Quiver,"Категория снаряжения: Adventuring Gear. 
+Вес: 1. 
+Цена: 1 gp. 
+Описание: A quiver can hold up to 20 arrows."
+168,"Ram, portable","Категория снаряжения: Adventuring Gear. 
+Вес: 35. 
+Цена: 4 gp. 
+Описание: You can use a portable ram to break down doors. When doing so, you gain a +4 bonus on the Strength check. One other character can help you use the ram, giving you advantage on this check."
+169,Rapier,"Категория снаряжения: Weapon. 
+Вес: 2. 
+Цена: 25 gp. 
+Описание: -"
+170,Rations (1 day),"Категория снаряжения: Adventuring Gear. 
+Вес: 2. 
+Цена: 5 sp. 
+Описание: Rations consist of dry foods suitable for extended travel, including jerky, dried fruit, hardtack, and nuts."
+171,Reliquary,"Категория снаряжения: Adventuring Gear. 
+Вес: 2. 
+Цена: 5 gp. 
+Описание: A holy symbol is a representation of a god or pantheon. It might be an amulet depicting a symbol representing a deity, the same symbol carefully engraved or inlaid as an emblem on a shield, or a tiny box holding a fragment of a sacred relic. Appendix B lists the symbols commonly associated with many gods in the multiverse. A cleric or paladin can use a holy symbol as a spellcasting focus. To use the symbol in this way, the caster must hold it in hand, wear it visibly, or bear it on a shield."
+172,Ring Mail,"Категория снаряжения: Armor. 
+Вес: 40. 
+Цена: 30 gp. 
+Описание: -"
+173,Robes,"Категория снаряжения: Adventuring Gear. 
+Вес: 4. 
+Цена: 1 gp. 
+Описание: -"
+174,Rod,"Категория снаряжения: Adventuring Gear. 
+Вес: 2. 
+Цена: 10 gp. 
+Описание: An arcane focus is a special item--an orb, a crystal, a rod, a specially constructed staff, a wand-like length of wood, or some similar item--designed to channel the power of arcane spells. A sorcerer, warlock, or wizard can use such an item as a spellcasting focus."
+175,"Rope, hempen (50 feet)","Категория снаряжения: Adventuring Gear. 
+Вес: 10. 
+Цена: 1 gp. 
+Описание: Rope, whether made of hemp or silk, has 2 hit points and can be burst with a DC 17 Strength check."
+176,"Rope, silk (50 feet)","Категория снаряжения: Adventuring Gear. 
+Вес: 5. 
+Цена: 10 gp. 
+Описание: Rope, whether made of hemp or silk, has 2 hit points and can be burst with a DC 17 Strength check."
+177,Rowboat,"Категория снаряжения: Mounts and Vehicles. 
+Вес: -. 
+Цена: 50 gp. 
+Описание: Keelboats and rowboats are used on lakes and rivers. If going downstream, add the speed of the current (typically 3 miles per hour) to the speed of the vehicle. These vehicles can't be rowed against any significant current, but they can be pulled upstream by draft animals on the shores. A rowboat weighs 100 pounds, in case adventurers carry it over land."
+178,Sack,"Категория снаряжения: Adventuring Gear. 
+Вес: 0.5. 
+Цена: 1 cp. 
+Описание: -"
+179,"Saddle, Exotic","Категория снаряжения: Mounts and Vehicles. 
+Вес: 50. 
+Цена: 60 gp. 
+Описание: An exotic saddle is required for riding any aquatic or flying mount."
+180,"Saddle, Military","Категория снаряжения: Mounts and Vehicles. 
+Вес: 30. 
+Цена: 20 gp. 
+Описание: A military saddle braces the rider, helping you keep your seat on an active mount in battle. It gives you advantage on any check you make to remain mounted."
+181,"Saddle, Pack","Категория снаряжения: Mounts and Vehicles. 
+Вес: 15. 
+Цена: 5 gp. 
+Описание: -"
+182,"Saddle, Riding","Категория снаряжения: Mounts and Vehicles. 
+Вес: 25. 
+Цена: 10 gp. 
+Описание: -"
+183,Saddlebags,"Категория снаряжения: Mounts and Vehicles. 
+Вес: 8. 
+Цена: 4 gp. 
+Описание: -"
+184,Sailing ship,"Категория снаряжения: Mounts and Vehicles. 
+Вес: -. 
+Цена: 10000 gp. 
+Описание: -"
+185,Scale Mail,"Категория снаряжения: Armor. 
+Вес: 45. 
+Цена: 50 gp. 
+Описание: -"
+186,"Scale, merchant's","Категория снаряжения: Adventuring Gear. 
+Вес: 3. 
+Цена: 5 gp. 
+Описание: A scale includes a small balance, pans, and a suitable assortment of weights up to 2 pounds. With it, you can measure the exact weight of small objects, such as raw precious metals or trade goods, to help determine their worth."
+187,Scholar's Pack,"Категория снаряжения: Adventuring Gear. 
+Вес: -. 
+Цена: 40 gp. 
+Описание: -"
+188,Scimitar,"Категория снаряжения: Weapon. 
+Вес: 3. 
+Цена: 25 gp. 
+Описание: -"
+189,Sealing wax,"Категория снаряжения: Adventuring Gear. 
+Вес: 0. 
+Цена: 5 sp. 
+Описание: -"
+190,Shawm,"Категория снаряжения: Tools. 
+Вес: 1. 
+Цена: 2 gp. 
+Описание: Several of the most common types of musical instruments are shown on the table as examples. If you have proficiency with a given musical instrument, you can add your proficiency bonus to any ability checks you make to play music with the instrument. A bard can use a musical instrument as a spellcasting focus. Each type of musical instrument requires a separate proficiency."
+191,Shield,"Категория снаряжения: Armor. 
+Вес: 6. 
+Цена: 10 gp. 
+Описание: -"
+192,Shortbow,"Категория снаряжения: Weapon. 
+Вес: 2. 
+Цена: 25 gp. 
+Описание: -"
+193,Shortsword,"Категория снаряжения: Weapon. 
+Вес: 2. 
+Цена: 10 gp. 
+Описание: -"
+194,Shovel,"Категория снаряжения: Adventuring Gear. 
+Вес: 5. 
+Цена: 2 gp. 
+Описание: -"
+195,Sickle,"Категория снаряжения: Weapon. 
+Вес: 2. 
+Цена: 1 gp. 
+Описание: -"
+196,Signal whistle,"Категория снаряжения: Adventuring Gear. 
+Вес: 0. 
+Цена: 5 cp. 
+Описание: -"
+197,Signet ring,"Категория снаряжения: Adventuring Gear. 
+Вес: 0. 
+Цена: 5 gp. 
+Описание: -"
+198,Sled,"Категория снаряжения: Mounts and Vehicles. 
+Вес: 300. 
+Цена: 20 gp. 
+Описание: -"
+199,Sling,"Категория снаряжения: Weapon. 
+Вес: 0. 
+Цена: 1 sp. 
+Описание: -"
+200,Sling bullet,"Категория снаряжения: Adventuring Gear. 
+Вес: 1.5. 
+Цена: 4 cp. 
+Описание: -"
+201,Small knife,"Категория снаряжения: Adventuring Gear. 
+Вес: 0. 
+Цена: 0 cp. 
+Описание: A small knife, typically found in a scholar's pack."
+202,Smith's Tools,"Категория снаряжения: Tools. 
+Вес: 8. 
+Цена: 20 gp. 
+Описание: These special tools include the items needed to pursue a craft or trade. The table shows examples of the most common types of tools, each providing items related to a single craft. Proficiency with a set of artisan's tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan's tools requires a separate proficiency."
+203,Soap,"Категория снаряжения: Adventuring Gear. 
+Вес: 0. 
+Цена: 2 cp. 
+Описание: -"
+204,Spear,"Категория снаряжения: Weapon. 
+Вес: 3. 
+Цена: 1 gp. 
+Описание: -"
+205,Spellbook,"Категория снаряжения: Adventuring Gear. 
+Вес: 3. 
+Цена: 50 gp. 
+Описание: Essential for wizards, a spellbook is a leather-bound tome with 100 blank vellum pages suitable for recording spells."
+206,"Spike, iron","Категория снаряжения: Adventuring Gear. 
+Вес: 5. 
+Цена: 1 sp. 
+Описание: -"
+207,Splint Armor,"Категория снаряжения: Armor. 
+Вес: 60. 
+Цена: 200 gp. 
+Описание: -"
+208,Sprig of mistletoe,"Категория снаряжения: Adventuring Gear. 
+Вес: 0. 
+Цена: 1 gp. 
+Описание: A druidic focus might be a sprig of mistletoe or holly, a wand or scepter made of yew or another special wood, a staff drawn whole out of a living tree, or a totem object incorporating feathers, fur, bones, and teeth from sacred animals. A druid can use such an object as a spellcasting focus."
+209,Spyglass,"Категория снаряжения: Adventuring Gear. 
+Вес: 1. 
+Цена: 1000 gp. 
+Описание: Objects viewed through a spyglass are magnified to twice their size."
+210,Stabling (1 day),"Категория снаряжения: Mounts and Vehicles. 
+Вес: 0. 
+Цена: 5 sp. 
+Описание: -"
+211,Staff,"Категория снаряжения: Adventuring Gear. 
+Вес: 4. 
+Цена: 5 gp. 
+Описание: An arcane focus is a special item--an orb, a crystal, a rod, a specially constructed staff, a wand-like length of wood, or some similar item--designed to channel the power of arcane spells. A sorcerer, warlock, or wizard can use such an item as a spellcasting focus."
+212,String (10 feet),"Категория снаряжения: Adventuring Gear. 
+Вес: 0. 
+Цена: 0 cp. 
+Описание: A 10-foot length of string, typically found in a burglar's pack."
+213,Studded Leather Armor,"Категория снаряжения: Armor. 
+Вес: 13. 
+Цена: 45 gp. 
+Описание: -"
+214,"Tent, two-person","Категория снаряжения: Adventuring Gear. 
+Вес: 20. 
+Цена: 2 gp. 
+Описание: A simple and portable canvas shelter, a tent sleeps two."
+215,Thieves' Tools,"Категория снаряжения: Tools. 
+Вес: 1. 
+Цена: 25 gp. 
+Описание: This set of tools includes a small file, a set of lock picks, a small mirror mounted on a metal handle, a set of narrow-bladed scissors, and a pair of pliers. Proficiency with these tools lets you add your proficiency bonus to any ability checks you make to disarm traps or open locks."
+216,Tinderbox,"Категория снаряжения: Adventuring Gear. 
+Вес: 1. 
+Цена: 5 sp. 
+Описание: This small container holds flint, fire steel, and tinder (usually dry cloth soaked in light oil) used to kindle a fire. Using it to light a torch--or anything else with abundant, exposed fuel--takes an action. Lighting any other fire takes 1 minute."
+217,Tinker's Tools,"Категория снаряжения: Tools. 
+Вес: 10. 
+Цена: 50 gp. 
+Описание: These special tools include the items needed to pursue a craft or trade. The table shows examples of the most common types of tools, each providing items related to a single craft. Proficiency with a set of artisan's tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan's tools requires a separate proficiency."
+218,Torch,"Категория снаряжения: Adventuring Gear. 
+Вес: 1. 
+Цена: 1 cp. 
+Описание: A torch burns for 1 hour, providing bright light in a 20-foot radius and dim light for an additional 20 feet. If you make a melee attack with a burning torch and hit, it deals 1 fire damage."
+219,Totem,"Категория снаряжения: Adventuring Gear. 
+Вес: 0. 
+Цена: 1 gp. 
+Описание: A druidic focus might be a sprig of mistletoe or holly, a wand or scepter made of yew or another special wood, a staff drawn whole out of a living tree, or a totem object incorporating feathers, fur, bones, and teeth from sacred animals. A druid can use such an object as a spellcasting focus."
+220,Trident,"Категория снаряжения: Weapon. 
+Вес: 4. 
+Цена: 5 gp. 
+Описание: -"
+221,Vestments,"Категория снаряжения: Adventuring Gear. 
+Вес: 0. 
+Цена: 0 cp. 
+Описание: Religious clothing, typically found in a priest's pack."
+222,Vial,"Категория снаряжения: Adventuring Gear. 
+Вес: 0. 
+Цена: 1 gp. 
+Описание: -"
+223,Viol,"Категория снаряжения: Tools. 
+Вес: 1. 
+Цена: 30 gp. 
+Описание: Several of the most common types of musical instruments are shown on the table as examples. If you have proficiency with a given musical instrument, you can add your proficiency bonus to any ability checks you make to play music with the instrument. A bard can use a musical instrument as a spellcasting focus. Each type of musical instrument requires a separate proficiency."
+224,Wagon,"Категория снаряжения: Mounts and Vehicles. 
+Вес: 400. 
+Цена: 35 gp. 
+Описание: -"
+225,Wand,"Категория снаряжения: Adventuring Gear. 
+Вес: 1. 
+Цена: 10 gp. 
+Описание: An arcane focus is a special item--an orb, a crystal, a rod, a specially constructed staff, a wand-like length of wood, or some similar item--designed to channel the power of arcane spells. A sorcerer, warlock, or wizard can use such an item as a spellcasting focus."
+226,War pick,"Категория снаряжения: Weapon. 
+Вес: 2. 
+Цена: 5 gp. 
+Описание: -"
+227,Warhammer,"Категория снаряжения: Weapon. 
+Вес: 2. 
+Цена: 15 gp. 
+Описание: -"
+228,Warhorse,"Категория снаряжения: Mounts and Vehicles. 
+Вес: -. 
+Цена: 400 gp. 
+Описание: -"
+229,Warship,"Категория снаряжения: Mounts and Vehicles. 
+Вес: -. 
+Цена: 25000 gp. 
+Описание: -"
+230,Waterskin,"Категория снаряжения: Adventuring Gear. 
+Вес: 5. 
+Цена: 2 sp. 
+Описание: -"
+231,Weaver's Tools,"Категория снаряжения: Tools. 
+Вес: 5. 
+Цена: 1 gp. 
+Описание: These special tools include the items needed to pursue a craft or trade. The table shows examples of the most common types of tools, each providing items related to a single craft. Proficiency with a set of artisan's tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan's tools requires a separate proficiency."
+232,Whetstone,"Категория снаряжения: Adventuring Gear. 
+Вес: 1. 
+Цена: 1 cp. 
+Описание: -"
+233,Whip,"Категория снаряжения: Weapon. 
+Вес: 3. 
+Цена: 2 gp. 
+Описание: -"
+234,Woodcarver's Tools,"Категория снаряжения: Tools. 
+Вес: 5. 
+Цена: 1 gp. 
+Описание: These special tools include the items needed to pursue a craft or trade. The table shows examples of the most common types of tools, each providing items related to a single craft. Proficiency with a set of artisan's tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan's tools requires a separate proficiency."
+235,Wooden staff,"Категория снаряжения: Adventuring Gear. 
+Вес: 4. 
+Цена: 5 gp. 
+Описание: A druidic focus might be a sprig of mistletoe or holly, a wand or scepter made of yew or another special wood, a staff drawn whole out of a living tree, or a totem object incorporating feathers, fur, bones, and teeth from sacred animals. A druid can use such an object as a spellcasting focus."
+236,Yew wand,"Категория снаряжения: Adventuring Gear. 
+Вес: 1. 
+Цена: 10 gp. 
+Описание: A druidic focus might be a sprig of mistletoe or holly, a wand or scepter made of yew or another special wood, a staff drawn whole out of a living tree, or a totem object incorporating feathers, fur, bones, and teeth from sacred animals. A druid can use such an object as a spellcasting focus."
