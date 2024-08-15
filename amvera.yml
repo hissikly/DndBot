@@ -1,0 +1,11 @@
+meta:
+  environment: python
+  toolchain:
+    name: pip
+    version: 3.12.4
+build:
+  requirementsPath: requirements.txt
+run:
+  command: streamlit run main.py
+  persistenceMount: /data
+  containerPort: "80"
