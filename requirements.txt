@@ -4,8 +4,6 @@ gigachain-cli==0.0.28
 gigachain-community==0.2.11
 gigachain-core==0.2.29
 gigachain-experimental==0.0.64
-PyAudio==0.2.14
-pyproject-toml==0.0.10
 requests==2.32.3
 sounddevice==0.4.7
 SpeechRecognition==3.10.4
