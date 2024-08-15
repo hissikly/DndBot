@@ -257,7 +257,7 @@ def main():
                 st.session_state.messages.append(info_dict)
                 st.session_state.is_fsm_dialog = False
             else:
-                try:
+                # try:
                     voice_number = data.get_count_in_folder("static/music/voice/") + 1
                     path_to_voice = f"voice/voice{voice_number}.mp3"
                     llm_answer = ggm.get_message_by_gigachain(st.session_state.messages, prompt)
@@ -268,10 +268,10 @@ def main():
                     show_messages_states(info_dict)
                     
                     st.session_state.messages.append(info_dict)
-                except:
-                    info_dict = data.get_info_dict("assistant", data.smth_wrong_replic)
-                    show_messages_states(info_dict)
-                    st.session_state.messages.append(info_dict)
+                # except:
+                #     info_dict = data.get_info_dict("assistant", data.smth_wrong_replic)
+                #     show_messages_states(info_dict)
+                #     st.session_state.messages.append(info_dict)
 
         elif st.session_state.is_fsm_img:
             if prompt.strip().lower() == "стоп":
