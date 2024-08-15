@@ -4,7 +4,6 @@ import recogniton as rc
 from dotenv import load_dotenv
 import gigachat_models as ggm
 from playback import record_text, play_record_text, play_audio
-import pandas as pd
 from streamlit_option_menu import option_menu
 
 load_dotenv()

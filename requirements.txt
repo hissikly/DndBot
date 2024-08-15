@@ -2,8 +2,9 @@ streamlit
 bokeh
 streamlit_bokeh_events
 audio_recorder_streamlit
+streamlit_option_menu
+SpeechRecognition
 elevenlabs
 python-dotenv
 datasets
 sentencepiece
-streamlit_option_menu
