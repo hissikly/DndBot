@@ -33,7 +33,7 @@ def get_access_token():
     'Authorization': 'Basic ' + st.secrets["CREDENTIALS"]
     }
 
-    response = requests.request("POST", url, headers=headers, data=payload, verify=False)
+    response = requests.request("POST", url, headers=headers, data=payload)
     response_json = response.json()
 
     return response_json["access_token"]
@@ -72,7 +72,7 @@ def save_genrated_image(img_uuid):
         'Authorization': 'Bearer ' + access_token
     }
 
-    response = requests.request("GET", url, headers=headers, stream=True, verify=False)
+    response = requests.request("GET", url, headers=headers, stream=True)
     image_number = data.get_count_in_folder("static/images/generated/") + 1
     path_to_img = f'static/images/generated/img{image_number}.jpg'
     with open(path_to_img, 'wb') as out_file:
@@ -86,7 +86,7 @@ def get_image_by_gigachain(message: str):
     url = "https://gigachat.devices.sberbank.ru/api/v1/chat/completions"
     payload, headers = get_payload_headers(message)
 
-    response = requests.request("POST", url, headers=headers, data=payload, verify=False)
+    response = requests.request("POST", url, headers=headers, data=payload)
     return_json = response.json()
 
     content = return_json["choices"][0]["message"]["content"]
