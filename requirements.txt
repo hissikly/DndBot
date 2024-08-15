@@ -11,8 +11,7 @@ gigachain_core
 gigachain_community
 gigachain_experimental
 SpeechRecognition
+pyAudio
 elevenlabs
 datasets
 sentencepiece
-pyttsx3
-pyaudio
