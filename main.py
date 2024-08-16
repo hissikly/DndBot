@@ -235,7 +235,7 @@ def main():
                 st.session_state.messages.append(info_dict)
                 st.session_state.is_fsm_dialog = False
             else:
-                # try:
+                try:
                     llm_answer = ggm.get_message_by_gigachain(st.session_state.messages, prompt)
                     record_text(llm_answer, data.voice_types[voice_type])
 
@@ -243,10 +243,10 @@ def main():
                     show_messages_states(info_dict)
 
                     st.session_state.messages.append(info_dict)
-                # except:
-                #     info_dict = data.get_info_dict("assistant", data.smth_wrong_replic)
-                #     show_messages_states(info_dict)
-                #     st.session_state.messages.append(info_dict)
+                except:
+                    info_dict = data.get_info_dict("assistant", data.smth_wrong_replic)
+                    show_messages_states(info_dict)
+                    st.session_state.messages.append(info_dict)
 
         elif st.session_state.is_fsm_img:
             if prompt.strip().lower() == "стоп":
@@ -300,14 +300,14 @@ def main():
             st.session_state.messages.append(info_dict)
 
         else:
-            # try:
+            try:
                 response = f"Прародитель:\n {prompt}"
                 with st.chat_message("assistant"):
                     st.markdown(response)
                 play_record_text(voice_type, prompt)
                 st.session_state.messages.append({"role": "assistant", "content": response, "command": "speak"})
-            # except:
-            #     st.session_state.messages.append({"role": "assistant", "content": data.smth_wrong_replic})
+            except:
+                st.session_state.messages.append({"role": "assistant", "content": data.smth_wrong_replic})
     
 
 if __name__ == "__main__":
