@@ -151,17 +151,17 @@ subclasses = {'Berserker': "Класс: Barbarian, Subclass flavor: Primal Path,
               'Open Hand': 'Класс: Monk, Subclass flavor: Monastic Tradition, Описание: Monks of the Way of the Open Hand are the ultimate masters of martial arts combat, whether armed or unarmed. They learn techniques to push and trip their opponents, manipulate ki to heal damage to their bodies, and practice advanced meditation that can protect them from harm.', 
               'Thief': "Класс: Rogue, Subclass flavor: Roguish Archetype, Описание: You hone your skills in the larcenous arts. Burglars, bandits, cutpurses, and other criminals typically follow this archetype, but so do rogues who prefer to think of themselves as professional treasure seekers, explorers, delvers, and investigators. In addition to improving your agility and stealth, you learn skills useful for delving into ancient ruins, reading unfamiliar languages, and using magic items you normally couldn't employ."}
 
-equipment = pd.read_csv("static/data/equipment.csv")
+equipment = pd.read_csv("static/df/equipment.csv")
 
-features = pd.read_csv("static/data/features.csv")
+features = pd.read_csv("static/df/features.csv")
 
-magic_items = pd.read_csv("static/data/magic_items.csv")
+magic_items = pd.read_csv("static/df/magic_items.csv")
 
-monsters = pd.read_csv("static/data/monsters.csv", delimiter=",")
+monsters = pd.read_csv("static/df/monsters.csv", delimiter=",")
 
-races = pd.read_csv("static/data/races.csv")
+races = pd.read_csv("static/df/races.csv")
 
-spells = pd.read_csv("static/data/spells.csv")
+spells = pd.read_csv("static/df/spells.csv")
 
 
 languagees = {'Abyssal': 'Тип: Exotic. Носители: Demons', 'Celestial': 'Тип: Exotic. Носители: Celestials', 'Common': 'Тип: Standard. Носители: Humans', 
